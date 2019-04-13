@@ -1,0 +1,12 @@
+Tubes Webpro
+
+Cara instalasi:
+-Nyalakan XAMPP. Aktifkan Apache dan MySQL
+-Letakan file di htdocs
+-Buat database dengan nama "gramed", lalu import database "gramed.sql". Lokasi file ada di dalam folder Database
+-Akses website dengan menggunakan browser dan ketik Localhost di address bar
+
+Dokumentasi akan dibuat secepat mungkin
+
+Regards
+-Raka Adhi

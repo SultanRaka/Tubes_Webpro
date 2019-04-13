@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2019 at 05:25 PM
+-- Generation Time: Apr 13, 2019 at 06:31 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -78,6 +78,18 @@ INSERT INTO `kategori` (`nama_kategori`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `orderan`
+--
+
+CREATE TABLE `orderan` (
+  `id` int(11) NOT NULL,
+  `judul` varchar(100) DEFAULT NULL,
+  `harga` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pengguna`
 --
 
@@ -114,10 +126,26 @@ ALTER TABLE `kategori`
   ADD PRIMARY KEY (`nama_kategori`);
 
 --
+-- Indexes for table `orderan`
+--
+ALTER TABLE `orderan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pengguna`
 --
 ALTER TABLE `pengguna`
   ADD PRIMARY KEY (`email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `orderan`
+--
+ALTER TABLE `orderan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Constraints for dumped tables
