@@ -60,8 +60,15 @@ class Welcome extends CI_Controller {
 	}
 	
 	function keranjang(){
+		$data['pengguna'] = $this->m_data->get_pengguna()->result();
+		$data2['orderan'] = $this->m_data->get_order()->result();
 		$this->load->view('header');
-		$this->load->view('page_keranjang');
+		$this->load->view('page_keranjang',$data, $data2);
+	}
+	
+	function checkout(){
+		$this->load->view('header');
+		$this->load->view('page_checkout');
 	}
 	
 	/** untuk load page buku sejarah */
@@ -147,6 +154,28 @@ class Welcome extends CI_Controller {
 	
 	
 	/** untuk fungsi */
+	function tambah_aksi(){
+		$judul = $this->input->post('judul');
+		$harga = $this->input->post('harga');
+ 
+		$data = array(
+			'judul' => $judul,
+			'harga' => $harga
+			);
+		$this->m_data->input_data($data,'orderan');
+		redirect(base_url('index.php/Welcome/keranjang'));
+	}
+		  
+	function hapus($id){
+		$where = array('id' => $id);
+		$this->m_data->hapus_data($where,'orderan');
+		redirect(base_url('index.php/Welcome/keranjang'));
+	}
+	
+	function wipe(){
+		$this->m_data->wipe_order();
+		redirect(base_url());
+	}
 	
 	function register_user(){
 		$email = $this->input->post('email');
@@ -174,12 +203,16 @@ class Welcome extends CI_Controller {
 			'pass' => $pass
 			);
 		$cek = $this->m_data->cek_log("pengguna",$where)->num_rows();
+		$query = $this->db->query("SELECT * FROM pengguna where email = '$email'");
 		if($cek > 0){
- 
-			$data_session = array(
-				'email' => $email,
-				'status' => "login"
-				);
+			foreach ($query->result() as $row){
+				$data_session = array(
+					'nama' => $row->nama,
+					'alamat' => $row->alamat,
+					'email' => $email,
+					'status' => "login"
+					);
+			}
  
 			$this->session->set_userdata($data_session);
  

@@ -6,8 +6,7 @@
 				<div class="row">
 					<div class="col-sm-2"></div>
 					<div class="col-sm-5">
-						<?php $name = $this->session->userdata('email'); ?>
-						<p class="text-light">Selamat datang, <?php echo $name ?></p>
+						<p class="text-light">Selamat datang, <?php echo $this->session->userdata('nama') ?></p>
 					</div>
 					<div class="col-sm-3">
 						<a href="<?php echo base_url();?>index.php/Welcome/logout"> Logout </a>

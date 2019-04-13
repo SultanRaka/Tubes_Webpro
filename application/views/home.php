@@ -81,16 +81,16 @@
 						</ol>
 						<div class="carousel-inner">
 							<div class="carousel-item active" >
-								<a href="#"> <img src="<?php echo base_url('img/buku/poli/pange.jpg'); ?>" width="315" height="500" class="d-block img-fluid"> </a>
+								<a href="<?php echo base_url('index.php/Welcome/pange')?>"> <img src="<?php echo base_url('img/buku/poli/pange.jpg'); ?>" width="315" height="500" class="d-block img-fluid"> </a>
 							</div>
 							<div class="carousel-item">
-								<a href="#"> <img src="<?php echo base_url('img/buku/tekno/php.jpg'); ?>" width="315" height="500" class="d-block img-fluid"> </a>
+								<a href="<?php echo base_url('index.php/Welcome/php')?>"> <img src="<?php echo base_url('img/buku/tekno/php.jpg'); ?>" width="315" height="500" class="d-block img-fluid"> </a>
 							</div>
 							<div class="carousel-item">
-								<a href="#"> <img src="<?php echo base_url('img/buku/sejarah/hitler.jpg'); ?>" width="315" height="500" class="d-block img-fluid"> </a>
+								<a href="<?php echo base_url('index.php/Welcome/hitler')?>"> <img src="<?php echo base_url('img/buku/sejarah/hitler.jpg'); ?>" width="315" height="500" class="d-block img-fluid"> </a>
 							</div>
 							<div class="carousel-item">
-								<a href="#"> <img src="<?php echo base_url('img/buku/komik/aot.jpg'); ?>" width="315" height="500" class="d-block img-fluid"> </a>
+								<a href="<?php echo base_url('index.php/Welcome/aot')?>"> <img src="<?php echo base_url('img/buku/komik/aot.jpg'); ?>" width="315" height="500" class="d-block img-fluid"> </a>
 							</div>
 						</div>
 						 <!-- Left and right controls -->

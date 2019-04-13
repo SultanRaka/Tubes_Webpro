@@ -26,18 +26,21 @@
 				<img src="<?php echo base_url('img/buku/poli/mary2.jpg'); ?>" width="315" height="500">
 			</div>
 			<div class="col-sm-1 " align="center"></div>
-			<div class="col-sm-7">
-				<h2 class="font-weight-bold">Judul</h2>
-				<h3><?php echo $buku[$id]->judul; ?></h3>
-				<h2 class="font-weight-bold">Author</h2>
-				<h3><?php echo $buku[$id]->author; ?></h3>
-				<h2 class="font-weight-bold">Kategori</h2>
-				<h3><?php echo $buku[$id]->kategori; ?></h3>
-				<h2 class="font-weight-bold">Deskripsi</h2>
-				<h3><?php echo $buku[$id]->deskripsi; ?></h3>
-				<h2 class="font-weight-bold">Harga</h2>
-				<h3> Rp <?php echo $buku[$id]->harga; ?></h3>
-			</div>
+			<form action="<?php echo base_url(). 'index.php/welcome/tambah_aksi'; ?>" method="post">
+				<div class="col-sm-7">
+					<h2 class="font-weight-bold">Judul</h2>
+					<h3><input type="text" name="judul" value="<?php echo $buku[$id]->judul; ?>" readonly></h3>
+					<h2 class="font-weight-bold">Author</h2>
+					<h3><?php echo $buku[$id]->author; ?></h3>
+					<h2 class="font-weight-bold">Kategori</h2>
+					<h3><?php echo $buku[$id]->kategori; ?></h3>
+					<h2 class="font-weight-bold">Deskripsi</h2>
+					<h3><?php echo $buku[$id]->deskripsi; ?></h3>
+					<h2 class="font-weight-bold">Harga</h2>
+					<h3><input type="text" name="harga" value="<?php echo $buku[$id]->harga; ?>" readonly></h3>
+					<input type="submit" value="beli">
+				</div>
+			</form>
 		</div>
   </body>
  </html>
