@@ -1,50 +1,50 @@
-<!doctype html>
-<html>
-<head>
-	<!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <nav class="navbar navbar-expand-xl navbar-dark bg-black fixed-top">
+      <div class="col-md-12 no-border">
+        <div class="inner-container">
+          <img src="<?= base_url('img/logo/gramed2.png')  ?>" style="float:left; height:36px;">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
-	<title>Register</title>
-</head>
-<script>
-function PesanRegister() {
-  alert("Registrasi berhasil!");
-}
-</script>
-<body>
-	<center>
-		<h1>Registrasi</h1>
-	</center>
-	<form action="<?php echo base_url(). 'index.php/welcome/register_user'; ?>" method="post">
-		<table style="margin:20px auto;">
-			<tr>
-				<td>Email</td>
-				<td><input type="text" name="email"></td>
-			</tr>
-			<tr>
-				<td>Nama</td>
-				<td><input type="text" name="nama"></td>
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input type="password" name="password"></td>
-			</tr>
-			<tr>
-				<td>Alamat</td>
-				<td><input type="text" name="alamat"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" value="Register" onclick = "PesanRegister()"></td>
-			</tr>
-		</table>
-	</form>	
-</body>
-</html>
+        </div>
+      </div>
+  </nav>
+    <div class="inner-container" style="padding-top:5%;">
+      <div class="container-fluid" style="display:flex;">
+        <div class="container-fluid">
+          <h1 style="padding-bottom:20px;">Daftar</h1>
+          <form action="<?php echo base_url(). 'index.php/welcome/register_user'; ?>" method="post"  style="max-width:350px;">
+            <div class="no-border">
+              <input type="text" name="name" placeholder="Nama Lengkap" style="width:400px; height:20px; ">
+            </div>
+            <div class="no-border">
+              <input type="text" name="email" placeholder="Email" style="width:400px; height:20px; ">
+            </div>
+            <div class="no-border">
+                <input type="password" name="password" placeholder="Kata Sandi" style="width:400px;height:20px; ">
+            </div>
+            <div style="display:flex; padding-top:20px;">
+              <div> <input type="checkbox" name="" value=""   > </div>
+              <div style="padding-left:10px;">
+                  Dengan pembuatan akun, Anda menyetujui <a href="#">syarat & ketentuan</a> Gramedia.com
+              </div>
+            </div>
+            <div style="padding-top:20px;">
+              <button type="submit" name="button" style="height:47px; width:390px;">Daftar</button>
+            </div>
+            <div style="padding-top:20px" align="center">
+              Sudah mendaftar? <a href="#">Masuk</a>
+            </div>
+          </form>
+        </div>
+        <div class="container-fluid" style="border-left:1px solid black;">
+          <div style="height:60px; width:380px; border:1px solid black; margin-left:50px;" align="center">
+            <div style="margin-top:20px;">
+              <a href="#">Daftar Dengan Facebook</a>
+            </div>
+          </div>
+          <div style="height:60px; width:380px; border:1px solid black; margin-left:50px; margin-top:20px;" align="center">
+            <div style="margin-top:20px;">
+              <a href="#" >Daftar Dengan Google</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
