@@ -1,53 +1,58 @@
-<footer id="footer">
-  <div class="footer-top paddingtopuniversal">
-    <div class="container-fluid">
-      <div class="row footerpaddingbottom paddinguniversal">
-        <div class="col-lg-6 footerbackground">
+<footer id="footer" style="padding-top:5%;">
+  <div class="container-fluid footercontainer">
+    <div class="inner-container">
+      <div class="container-fluid" style="display:flex;">
+        <div class="container-fluid" >
             Jadilah yang pertama tahu berita terbaru event dan penawaran spesial kami <br>
             <input type="text" placeholder="Masukan Alamat Email Anda">
             <button type="button" name="button">Daftar</button>
         </div>
-        <div class="col-lg-6" >
+        <div class="container-fluid" >
           <h5>Ikuti Kami</h5>
           <a href="#" >Insta</a>
           <a href="#" >Twitter</a>
           <a href="#" >Facebook</a>
         </div>
       </div>
-      <div class="row paddinguniversal">
-        <div class="col-lg-2">
-          <h5>BELANJA</h5>
-          <a href="#" class="footeranchor">Berbelanja</a>
-          <a href="#" class="footeranchor">Pembayaran</a>
-          <a href="#" class="footeranchor">Pengiriman</a>
-        </div>
-        <div class="col-lg-2">
-          <h5>TENTANG GRAMEDIA</h5>
-          <a href="#" class="footeranchor">Tentang Kami</a>
-          <a href="#" class="footeranchor">Toko Kami</a>
-          <a href="#" class="footeranchor">Kerjasama</a>
-        </div>
-        <div class="col-lg-2">
-          <h5>LAINNYA</h5>
-          <a href="#" class="footeranchor">Syarat & Ketentuan</a>
-          <a href="#" class="footeranchor">Bantuan</a>
-          <a href="#" class="footeranchor">Hubungi Kami</a>
-        </div>
-        <div class="col-lg-2">
-          <div class="row">
-            <h5>PEMBAYARAN</h5>
-            <br>Mandiri,Gopay,BNI <br>
-            BRI,BCA,Permata Bank
+    </div>
+  </div>
+    <div class="container-fluid footercontainer">
+      <div class="inner-container">
+        <div class="container-fluid">
+          <div class="col-lg-2">
+            <h5>BELANJA</h5>
+            <a href="#" class="footeranchor">Berbelanja</a>
+            <a href="#" class="footeranchor">Pembayaran</a>
+            <a href="#" class="footeranchor">Pengiriman</a>
           </div>
-          <div class="row">
-            <h5>PENGIRIMAN</h5>
-            <br>KGX,Pickup Store
+          <div class="col-lg-2">
+            <h5>TENTANG GRAMEDIA</h5>
+            <a href="#" class="footeranchor">Tentang Kami</a>
+            <a href="#" class="footeranchor">Toko Kami</a>
+            <a href="#" class="footeranchor">Kerjasama</a>
           </div>
-        </div>
-        <div class="col-lg-2 footeranchor">
-          <h5>DAPATKAN APPS KAMI</h5>
-          <a href="#" class="footeranchor">Playstore</a>
-          <a href="#" class="footeranchor">Apple</a>
+          <div class="col-lg-2">
+            <h5>LAINNYA</h5>
+            <a href="#" class="footeranchor">Syarat & Ketentuan</a>
+            <a href="#" class="footeranchor">Bantuan</a>
+            <a href="#" class="footeranchor">Hubungi Kami</a>
+          </div>
+          <div class="col-lg-2">
+            <div class="row">
+              <h5>PEMBAYARAN</h5>
+              <br>Mandiri,Gopay,BNI <br>
+              BRI,BCA,Permata Bank
+            </div>
+            <div class="row">
+              <h5>PENGIRIMAN</h5>
+              <br>KGX,Pickup Store
+            </div>
+          </div>
+          <div class="col-lg-2 footeranchor">
+            <h5>DAPATKAN APPS KAMI</h5>
+            <a href="#" class="footeranchor">Playstore</a>
+            <a href="#" class="footeranchor">Apple</a>
+          </div>
         </div>
       </div>
     </div>

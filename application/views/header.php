@@ -117,30 +117,32 @@
 	height: 432px;
 }
 	.carousel-cell {
-  width: 20%;
-  margin-right: 10px;
-  border-radius: 5px;
-
-}
+  	width: 20%;
+  	margin-right: 10px;
+  	border-radius: 5px;
+	}
 	.carousel-cell:before {
-  display: block;
-  text-align: center;
-  font-size: 80px;
-}
+  	display: block;
+  	text-align: center;
+  	font-size: 80px;
+	}
 	.card-img-top{
-  width: 152px;
-  height: 228px;
-}
+  	width: 152px;
+  	height: 228px;
+	}
 	.flash-sale-container{
-
-	background: url(https://www.gramedia.com/flash-sale-banner-ii.png);
-	background-size: cover;
-	padding-top: 20px;
-	padding-bottom: 450px;
-
-}
-	.flickity-page-dots { display: none; }
-
+		background: url(https://www.gramedia.com/flash-sale-banner-ii.png);
+		background-size: cover;
+		padding-top: 20px;
+		padding-bottom: 450px;
+	}
+	.flickity-page-dots {
+		display: none;
+	}
+	.footercontainer{
+		background: #f0f0f0;
+		margin-top: 10px;
+	}
 </style>
 
 <head>
@@ -165,13 +167,38 @@
 						<div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:5%;">
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Kategori</a>
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="navbardropdown" aria-haspopup="true" aria-expanded="false"> Kategori</a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 									<a class="dropdown-item" href="<?php echo base_url('index.php/welcome/sejarah')?>">Sejarah</a>
 									<a class="dropdown-item" href="<?php echo base_url('index.php/welcome/politik')?>">Politik</a>
 									<a class="dropdown-item" href="<?php echo base_url('index.php/welcome/terknologi')?>">Teknologi</a>
 									<a class="dropdown-item" href="<?php echo base_url('index.php/welcome/komik')?>">Komik</a>
 								</div>
+							</li>
+							<li class="nav-item">
+								<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
+								<ul class="dropdown-menu form-wrapper">
+									<li>
+										<form action="/examples/actions/confirmation.php" method="post">
+											<p class="hint-text">Sign in with your social media account</p>
+											<div class="form-group social-btn clearfix">
+												<a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
+												<a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
+											</div>
+											<div class="or-seperator"><b>or</b></div>
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder="Username" required="required">
+											</div>
+											<div class="form-group">
+												<input type="password" class="form-control" placeholder="Password" required="required">
+											</div>
+											<input type="submit" class="btn btn-primary btn-block" value="Login">
+											<div class="form-footer">
+												<a href="#">Forgot Your password?</a>
+											</div>
+										</form>
+									</li>
+								</ul>
 							</li>
 							<li class="nav-item">
 								<form class="form-inline">
@@ -202,10 +229,10 @@
 
 							</li>
 						</ul>
-						</div>
 					</div>
-				</div>
-				</div>
-				</div>
 				</nav>
+			</div>
 	</div>
+		</div>
+			</div>
+				</div>

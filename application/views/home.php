@@ -591,34 +591,6 @@
         </div>
       </div>
 
-      <div class="carousel" data-flickity='{ "freeScroll": true }' style="height">
-        <div class="carousel-cell">
-          <div class="card">
-            <a href="#"> <img style="max-height:84px; width:100%" src="https://cdn.gramedia.com/uploads/vendor/Logo.png" alt=""> </a>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div class="card">
-            <a href="#"> <img style="max-height:84px; width:100%" src="https://cdn.gramedia.com/uploads/vendor/Logo.png" alt=""> </a>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div class="card">
-            <a href="#"> <img style="max-height:84px; width:100%" src="https://cdn.gramedia.com/uploads/vendor/Logo.png" alt=""> </a>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div class="card">
-            <a href="#"> <img style="max-height:84px; width:100%" src="https://cdn.gramedia.com/uploads/vendor/Logo.png" alt=""> </a>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div class="card">
-            <a href="#"> <img style="max-height:84px; width:100%" src="https://cdn.gramedia.com/uploads/vendor/Logo.png" alt=""> </a>
-          </div>
-        </div>
-      </div>
-
 
 
 
