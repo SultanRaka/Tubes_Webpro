@@ -1,5 +1,5 @@
 
-	<div class="fixed-top" >
+	<div class="fixed-top">
 		<div class="miniheader-item col-md-12" style="background-color: #1c1540;">
 			<div class="miniheader-item-inner">
 				<a href="#">Bantuan</a>
@@ -16,13 +16,9 @@
 							</button>
 						<div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:5%;">
 						<ul class="navbar-nav mr-auto">
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="navbardropdown" aria-haspopup="true" aria-expanded="false"> Kategori</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="<?php echo base_url('index.php/welcome/sejarah')?>">Sejarah</a>
-									<a class="dropdown-item" href="<?php echo base_url('index.php/welcome/politik')?>">Politik</a>
-									<a class="dropdown-item" href="<?php echo base_url('index.php/welcome/terknologi')?>">Teknologi</a>
-									<a class="dropdown-item" href="<?php echo base_url('index.php/welcome/komik')?>">Komik</a>
+							<li class="nav-item" >
+								<div class="dropdown">
+									<a class="nav-link dropdown-toggle" href="#" role="button" data-target="#navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Kategori</a>
 								</div>
 							</li>
 							<li class="nav-item">
@@ -45,9 +41,9 @@
 								<?php } else{ ?>
 
 											<div class="col-sm-12" style="padding-top:30%">
-												<a data-toggle="modal" data-target="#logModal" href="#"> Masuk</a>
-													<a> | </a>
-												<a href="<?= base_url('index.php/Welcome/register');?>"> Register </a>
+												<a data-toggle="modal" data-target="#logModal" href="#" style=" font-size:18px; color:#fff;"> Masuk</a>
+													<a style="padding:0 10px 0;"> | </a>
+												<a href="<?= base_url('index.php/Welcome/register');?>"> <img src="<?= base_url('img/icons/cart.png')  ?>" style="max-width:25px; max-height:25px; padding-bottom:7px;"> </a>
 											</div>
 
 								<?php }?>
@@ -88,3 +84,40 @@
            </div>
          </div>
        </div>
+			 <div class="dropdown-menu"  id="navbarDropdown" aria-labelledby="navbarDropdown" style="z-index:9999; top:90px; position:sticky; width:100%;">
+				 <div class="inner-container">
+					 <div class="container-fluid">
+					 	<div class="drop-container">
+					 		<div class="drop-item">
+					 			<a href="#">BUKU</a>
+					 		</div>
+							<div class="drop-item">
+								<a href="#">EBOOK</a>
+							</div>
+							<div class="drop-item">
+								<a href="#">FASHION & AKSESORIS</a>
+							</div>
+							<div class="drop-item">
+								<a href="#">MAJALAH</a>
+							</div>
+							<div class="drop-item">
+								<a href="#">OLAHRAGA</a>
+							</div>
+							<div class="drop-item">
+								<a href="#">STATIONARY, SEKOLAH & KANTOR</a>
+							</div>
+							<div class="drop-item">
+								<a href="#">TEKNOLOGI</a>
+							</div>
+							<div class="drop-item">
+								<a href="#">MAINAN & HOBI</a>
+							</div>
+					 	</div>
+						<div class="drop-container">
+
+						</div>
+					 </div>
+				 </div>
+			 </div>
+
+			 <body>
