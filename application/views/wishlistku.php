@@ -21,7 +21,7 @@
 	 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
 <body>
-	<div class="container" style="margin-bottom : 100px; padding:10px;">
+	<div class="container" style="margin-bottom :100px; padding:10px;">
 		<div class="row">
 			<div class="col-md-8">
 				<h3 style="margin-left: 110px; font-family: Karla,sans-serif; font-size:16px; color: #281E5A;">Menampilkan <b>1 produk</b> dalam keranjang</h3><br>

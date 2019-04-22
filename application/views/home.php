@@ -1,21 +1,4 @@
-<!doctype html>
-<html lang="en">
-
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-	  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-	  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-	  <title>Gramedia.com</title>
-  </head>
-  <body>
-		  <div class="container-fluid"style=" padding-top:80px;">
+      <div class="container-fluid"style=" padding-top:80px;">
         <div class="inner-container" >
             <div class="container-fluid">
               <a style="float:right; padding:25px 0 16px 0;" href="<?= site_url();?>promo" class="rightanchor">Lihat semua</a>
@@ -51,15 +34,14 @@
                 <div class="square">
                   <a href="#"><img  src="<?php echo base_url('img/promo/A.jpg') ?>" /></a>
                 </div>
-                <div class="square">
+                <div class="square" style="margin-top:7px;">
                   <a href="#"><img  src="<?php echo base_url('img/promo/B.jpg') ?>" /></a>
                 </div>
               </div>
-
             </div>
         </div>
 		  </div>
-      <div class="container-fluid" >
+      <div class="container-fluid paddinghometop" >
           <div class="inner-container" align="center" id="homemenus" >
             <a href="#">
               <img src="https://cdn.gramedia.com/uploads/highlighted_menu/1._buku_baru__w200_hauto.png" alt="">
@@ -95,7 +77,7 @@
             </a>
           </div>
       </div>
-      <div class="container-fluid ">
+      <div class="container-fluid paddinghometop">
         <div class="inner-container  flash-sale-container" >
           <div class="item-section">
             <div class="col-md-2 container-fluid">
@@ -207,7 +189,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid home-cards">
+      <div class="container-fluid home-cards paddinghometop">
         <div class="inner-container">
           <div class="container-fluid">
             <h1 style="float:left;">Buku-Buku Terpopuler</h1>
@@ -276,7 +258,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid home-cards">
+      <div class="container-fluid home-cards paddinghometop">
         <div class="inner-container">
           <div class="container-fluid">
             <h1 style="float:left;">Novel Paling Laris</h1>
@@ -345,7 +327,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid home-cards">
+      <div class="container-fluid home-cards paddinghometop">
         <div class="inner-container">
           <div class="container-fluid">
             <h1 style="float:left;" >Ajak si Kecil Membaca</h1>
@@ -414,7 +396,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid home-cards">
+      <div class="container-fluid home-cards paddinghometop">
         <div class="inner-container">
           <div class="container-fluid">
             <h1 style="float:left;">Komik-Komik Pilihan</h1>
@@ -483,7 +465,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid home-cards">
+      <div class="container-fluid home-cards paddinghometop">
         <div class="inner-container">
           <div class="container-fluid">
             <h1 style="float:left;" >Tampil Lebih Gaya</h1>
@@ -591,41 +573,10 @@
         </div>
       </div>
 
-      <div class="carousel" data-flickity='{ "freeScroll": true }' style="height">
-        <div class="carousel-cell">
-          <div class="card">
-            <a href="#"> <img style="max-height:84px; width:100%" src="https://cdn.gramedia.com/uploads/vendor/Logo.png" alt=""> </a>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div class="card">
-            <a href="#"> <img style="max-height:84px; width:100%" src="https://cdn.gramedia.com/uploads/vendor/Logo.png" alt=""> </a>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div class="card">
-            <a href="#"> <img style="max-height:84px; width:100%" src="https://cdn.gramedia.com/uploads/vendor/Logo.png" alt=""> </a>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div class="card">
-            <a href="#"> <img style="max-height:84px; width:100%" src="https://cdn.gramedia.com/uploads/vendor/Logo.png" alt=""> </a>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <div class="card">
-            <a href="#"> <img style="max-height:84px; width:100%" src="https://cdn.gramedia.com/uploads/vendor/Logo.png" alt=""> </a>
-          </div>
-        </div>
-      </div>
-
 
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
-</html>
