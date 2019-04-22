@@ -118,6 +118,20 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	function promo(){
+		$this->load->view('imports');
+		$this->load->view('header');
+		$this->load->view('promo');
+		$this->load->view('footer');
+	}
+
+	function flash(){
+		$this->load->view('imports');
+		$this->load->view('header');
+		$this->load->view('flash_sale');
+		$this->load->view('footer');
+	}
+
 	/** untuk load page buku sejarah */
 
 	public function heil(){

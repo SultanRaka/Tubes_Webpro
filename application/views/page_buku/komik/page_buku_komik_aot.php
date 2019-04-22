@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-	
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,12 +12,12 @@
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	<title>Attack on Titans</title>
-	
-    
+
+
   </head>
   <body>
 	  <?php $id = 9?>
-	
+
 	</br>
 	<div class="row">
 			<div class="col-sm-2 " align="center"></div>
@@ -43,4 +43,3 @@
 		</div>
   </body>
  </html>
-

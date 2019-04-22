@@ -111,8 +111,45 @@
       </div>
     </div>
     <div id="produk" class="tab-pane fade">
-      <h3>Menu 1</h3>
-      <p>Tutorial pemrograman web, mobile dan design</p>
+      <div class="container-fluid">
+        <div class="">
+          <h4>Menampilkan ... dari ... result</h4>
+        </div>
+        <div class="">
+          <div style="display:flex;">
+            <div class="container-fluid" style="width:300px; height:150px; border:1px solid black; display:flex;">
+              <div style="padding:30px 0 0;">
+                <img src="https://www.gramedia.com/assets/default-images/author.svg" alt="">
+              </div>
+              <div style="padding:5% 20px 5%; ">
+                <h4>Yasmin A</h4>
+                <h5>Buku Terbaru</h5>
+                <h5>Buku : 2</h5>
+              </div>
+            </div>
+            <div class="container-fluid" style="width:300px; height:150px; border:1px solid black; display:flex;">
+              <div style="padding:30px 0 0;">
+                <img src="https://www.gramedia.com/assets/default-images/author.svg" alt="">
+              </div>
+              <div style="padding:5% 20px 5%; ">
+                <h4>Yasmin A</h4>
+                <h5>Buku Terbaru</h5>
+                <h5>Buku : 2</h5>
+              </div>
+            </div>
+            <div class="container-fluid" style="width:300px; height:150px; border:1px solid black; display:flex;">
+              <div style="padding:30px 0 0;">
+                <img src="https://www.gramedia.com/assets/default-images/author.svg" alt="">
+              </div>
+              <div style="padding:5% 20px 5%; ">
+                <h4>Yasmin A</h4>
+                <h5>Buku Terbaru</h5>
+                <h5>Buku : 2</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
