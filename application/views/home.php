@@ -1,7 +1,7 @@
       <div class="container-fluid"style=" padding-top:80px;">
         <div class="inner-container" >
             <div class="container-fluid">
-              <a style="float:right; padding:25px 0 16px 0;" href="<?= site_url();?>promo" class="rightanchor">Lihat semua</a>
+              <a style="float:right; padding:25px 0 16px 0;" href="<?= site_url();?>/Welcome/promo" class="rightanchor">Lihat semua</a>
             </div>
             <div  id="homepromos">
               <div id="promocarousel" class="carousel slide" data-ride="carousel" style="cursor:grab; touch-action:pan-y;">
