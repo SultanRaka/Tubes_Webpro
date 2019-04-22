@@ -26,42 +26,58 @@ class Welcome extends CI_Controller {
 	/** untuk load page utama */
 
 	public function sejarah(){
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_sejarah');
+		$this->load->view('footer');
 	}
 	public function politik(){
+		$this->load->view('imports');
+
 		$this->load->view('header');
 		$this->load->view('page_politik');
+		$this->load->view('footer');
 	}
 	public function teknologi(){
+		$this->load->view('imports');
+
 		$this->load->view('header');
 		$this->load->view('page_teknologi');
+		$this->load->view('footer');
 	}
 	public function komik(){
+		$this->load->view('imports');
+
 		$this->load->view('header');
 		$this->load->view('page_komik');
+		$this->load->view('footer');
 	}
 
 	public function index()
 	{
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('home');
+		$this->load->view('footer');
 	}
 
 
 	function register(){
-		$this->load->view('header');
+				$this->load->view('imports');
 		$this->load->view('page_register');
 	}
 
 	function logon(){
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_login');
+		$this->load->view('footer');
 	}
 
 	function keranjang(){
 		$data['pengguna'] = $this->m_data->get_pengguna()->result();
 		$data2['orderan'] = $this->m_data->get_order()->result();
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('wishlistku',$data, $data2);
 		$this->load->view('footer');
@@ -75,8 +91,10 @@ class Welcome extends CI_Controller {
 	}
 
 	function checkout(){
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_checkout');
+		$this->load->view('footer');
 	}
 
 	/** untuk load page buku sejarah */
@@ -84,80 +102,104 @@ class Welcome extends CI_Controller {
 	public function heil(){
 
 		$data['buku'] = $this->m_data->get_buku()->result();
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_buku/sejarah/page_buku_sejarah_heil',$data);
+		$this->load->view('footer');
 	}
 
 	public function belanda(){
 		$data['buku'] = $this->m_data->get_buku()->result();
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_buku/sejarah/page_buku_sejarah_belanda',$data);
+		$this->load->view('footer');
 	}
 
 	public function hitler(){
 		$data['buku'] = $this->m_data->get_buku()->result();
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_buku/sejarah/page_buku_sejarah_hitler',$data);
+		$this->load->view('footer');
 	}
 
 	/** untuk load page buku politik */
 
 	public function pange(){
 		$data['buku'] = $this->m_data->get_buku()->result();
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_buku/poli/page_buku_poli_pangeran',$data);
+		$this->load->view('footer');
 	}
 
 	public function mary(){
 		$data['buku'] = $this->m_data->get_buku()->result();
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_buku/poli/page_buku_poli_mary',$data);
+		$this->load->view('footer');
 	}
 
 	public function england(){
 		$data['buku'] = $this->m_data->get_buku()->result();
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_buku/poli/page_buku_poli_england',$data);
+		$this->load->view('footer');
 	}
 
 	/** untuk load page teknologi */
 
 	public function c(){
 		$data['buku'] = $this->m_data->get_buku()->result();
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_buku/tekno/page_buku_tekno_c',$data);
+		$this->load->view('footer');
 	}
 
 	public function php(){
 		$data['buku'] = $this->m_data->get_buku()->result();
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_buku/tekno/page_buku_tekno_php',$data);
+		$this->load->view('footer');
 	}
 
 	public function python(){
 		$data['buku'] = $this->m_data->get_buku()->result();
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_buku/tekno/page_buku_tekno_python',$data);
+		$this->load->view('footer');
 	}
 
 	/** untuk load page komik */
 
 	public function aot(){
 		$data['buku'] = $this->m_data->get_buku()->result();
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_buku/komik/page_buku_komik_aot',$data);
+		$this->load->view('footer');
 	}
 
 	public function naruto(){
 		$data['buku'] = $this->m_data->get_buku()->result();
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_buku/komik/page_buku_komik_naruto',$data);
+		$this->load->view('footer');
 	}
 
 	public function spider(){
 		$data['buku'] = $this->m_data->get_buku()->result();
+		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_buku/komik/page_buku_komik_spider',$data);
+		$this->load->view('footer');
 	}
 
 

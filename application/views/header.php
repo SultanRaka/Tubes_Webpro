@@ -1,176 +1,24 @@
-<style media="screen">
-	.miniheader-item-inner{
-		float: right;
-	}
-	.universalcontainer{
-		padding-top: 10%;
-	}
-	.navbar > .navbar-brand > img{
-		width: 185px;
-	}
-	.navbar{
-		height: 1%;
-	}
-	.fixed-top{
-		margin-bottom: 10%;
-	}
-	.miniheader-item{
-		height: 24px;
-		font-size: 14px;
-	}
-	.dropdown{
-		font-size: 19px;
-		top: 0;
-		padding-top: 4%;
-	}
-	.nav-item > form>button{
-		border: 0;
-		background: none;
-		padding: 2px 5px;
-		position: relative;
-		left: -28px;
-		margin-bottom: 0;
-		border-radius: 3px;
-	}
-	#promocarousel {
-		width: 75%;
-		height: 336px;
-	}
-	#promocarousel .carousel-item{
-		overflow: hidden;
-	}
-	#promocarousel .carousel-item img{
-				height: 336px;
-		    border-radius: 4px;
-		    background-color: #efefef;
-				object-fit: cover;
-	}
-	#smallcarousel {
-		padding-left: 8px;
-		display: flex;
-		    flex-direction: column;
-	}
-	.nav-item > form{
-		padding-top: 7%;
-	}
-	.navcontainer{
-		background-color: #281e5a;
-		height: 65px;
-		box-shadow: 0 0 0 0 rgba(0,0,0,.12), 0 4px 4px 0 rgba(0,0,0,.24);
-	}
-	#smallcarousel .square{
-		width: 336px;
-    height: 164px;
-    border-radius: 4px;
-    background-color: #fff;
-	}
-	#homepromos{
-		display: flex;
-	}
-	#smallcarousel .square a > img{
-		width: 100%;
-		height:100%;
-		object-fit: cover;
-	}
-	.paddinguniversal{
-		padding:auto;
-	}
-	.inner-container{
 
-		max-width: 1024px;
-		margin:auto;
-		box-sizing: border-box;
-	}
-	#homemenus  img {
-  	width: 100px;
-  	height: 100px;
-	}
-	#homemenus a{
-  	display: inline-block;
-		font-family: Karla,sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.29;
-    letter-spacing: normal;
-    text-align: center;
-    color: rgba(40,30,90,.86);
-    padding-top: 16px;
-  	padding-right: 20px;
-	}
-	#homemenus a > p{
-		margin-bottom: 5px;
-		word-wrap: break-word;
-	}
-	#homemenus{
-		position: relative;
-		margin-top: 10px;
-		display: flex;
-		justify-content: space-around;
-		flex-wrap: wrap;
-		width: 100%;
-	}
-
-	.main-carousel{
-	margin: auto;
-	height: 432px;
-}
-	.carousel-cell {
-  width: 20%;
-  margin-right: 10px;
-  border-radius: 5px;
-
-}
-	.carousel-cell:before {
-  display: block;
-  text-align: center;
-  font-size: 80px;
-}
-	.card-img-top{
-  width: 152px;
-  height: 228px;
-}
-	.flash-sale-container{
-
-	background: url(https://www.gramedia.com/flash-sale-banner-ii.png);
-	background-size: cover;
-	padding-top: 20px;
-	padding-bottom: 450px;
-
-}
-	.flickity-page-dots { display: none; }
-
-</style>
-
-<head>
-
-</head>
-	<div class="fixed-top" >
+	<div class="fixed-top">
 		<div class="miniheader-item col-md-12" style="background-color: #1c1540;">
 			<div class="miniheader-item-inner">
 				<a href="#">Bantuan</a>
 			</div>
-
 		</div>
 		    <div style="height:80px;" class="col-md-12 navcontainer">
 				<div class="container">
 				<div class="row" >
 					<div class="col-sm-12" style="height:7%" >
-						<nav class="navbar navbar-expand-xl navbar-dark bg-black " >
+						<nav class="navbar navbar-expand-xl navbar-dark bg-black" >
 							<a class="navbar-brand" href="<?php echo base_url();?>"> <img src="<?php echo base_url();?>img/logo/gramed.svg" w alt="Gramediul.com"> </a>
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"></span>
 							</button>
 						<div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:5%;">
 						<ul class="navbar-nav mr-auto">
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Kategori</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="<?php echo base_url('index.php/welcome/sejarah')?>">Sejarah</a>
-									<a class="dropdown-item" href="<?php echo base_url('index.php/welcome/politik')?>">Politik</a>
-									<a class="dropdown-item" href="<?php echo base_url('index.php/welcome/terknologi')?>">Teknologi</a>
-									<a class="dropdown-item" href="<?php echo base_url('index.php/welcome/komik')?>">Komik</a>
+							<li class="nav-item" >
+								<div class="dropdown">
+									<a class="nav-link dropdown-toggle" href="#" role="button" data-target="#navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Kategori</a>
 								</div>
 							</li>
 							<li class="nav-item">
@@ -183,7 +31,7 @@
 								<!-- sudah login -->
 								<?php if($this->session->userdata('email')){?>
 									<div class="col-sm-12" style="padding-top:30%">
-												<a href="<?php echo base_url();?>index.php/Welcome/logout"> Logout </a>
+												<a  href="<?php echo base_url();?>index.php/Welcome/logout"> Logout </a>
 													<a> | </a>
 												<a href="<?php echo base_url();?>index.php/Welcome/keranjang"> Keranjang </a>
 												<a> | </a>
@@ -195,9 +43,9 @@
 								<?php } else{ ?>
 
 											<div class="col-sm-12" style="padding-top:30%">
-												<a href="<?php echo base_url();?>index.php/Welcome/logon"> Masuk</a>
-													<a> | </a>
-												<a href="<?php echo base_url();?>index.php/Welcome/register"> Register </a>
+												<a data-toggle="modal" data-target="#logModal" href="#" style=" font-size:18px; color:#fff;"> Masuk</a>
+													<a style="padding:0 10px 0;"> | </a>
+												<a href="<?= base_url('index.php/Welcome/register');?>"> <img src="<?= base_url('img/icons/cart.png')  ?>" style="max-width:25px; max-height:25px; padding-bottom:7px;"> </a>
 											</div>
 
 								<?php }?>
@@ -205,9 +53,73 @@
 							</li>
 						</ul>
 						</div>
+						</nav>
 					</div>
 				</div>
 				</div>
+			</div>
 				</div>
-				</nav>
-	</div>
+			<div class="modal fade" id="logModal">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="card">
+               <article class="card-body">
+                 <form action="<?php echo base_url(). 'index.php/welcome/login'; ?>" method="post">
+                   <div class="form-group">
+                     <label>Email</label>
+                     <input class="form-control" placeholder="Email" type="email" name="email">
+                   </div>
+                   <!-- form-group// -->
+                   <div class="form-group">
+                     <label>Password</label>
+                     <input class="form-control" placeholder="******" type="password" name="password">
+                   </div> <!-- form-group// -->
+                   <div class="form-group">
+                     <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+                   </div> <!-- form-group// -->
+                 </form>
+								 <div class="">
+									 	Belum mendaftar? <a href="<?= base_url('index.php/Welcome/register');?>" class="btn btn-outline-primary">Daftar</a>
+								 </div>
+               </article>
+             </div>
+           </div>
+         </div>
+       </div>
+			 <div class="dropdown-menu"  id="navbarDropdown" aria-labelledby="navbarDropdown" style="z-index:9999; top:90px; position:sticky; width:100%;">
+				 <div class="inner-container">
+					 <div class="container-fluid">
+					 	<div class="drop-container">
+					 		<div class="drop-item">
+					 			<a href="#">BUKU</a>
+					 		</div>
+							<div class="drop-item">
+								<a href="#">EBOOK</a>
+							</div>
+							<div class="drop-item">
+								<a href="#">FASHION & AKSESORIS</a>
+							</div>
+							<div class="drop-item">
+								<a href="#">MAJALAH</a>
+							</div>
+							<div class="drop-item">
+								<a href="#">OLAHRAGA</a>
+							</div>
+							<div class="drop-item">
+								<a href="#">STATIONARY, SEKOLAH & KANTOR</a>
+							</div>
+							<div class="drop-item">
+								<a href="#">TEKNOLOGI</a>
+							</div>
+							<div class="drop-item">
+								<a href="#">MAINAN & HOBI</a>
+							</div>
+					 	</div>
+						<div class="drop-container">
+
+						</div>
+					 </div>
+				 </div>
+			 </div>
+
+			 <body>
