@@ -18,7 +18,7 @@
   <body>
     <div class="container" style="margin-top:200px; padding:10;">
       <div class="row">
-        <div class="col-md-4" style=" font-family:Karla,sans-serif;color:#281E5A;">
+        <div class="col-md-4" style="font:Karla,sans-serif;color:#281E5A;">
           <div class="halaman1" style="margin-left:200px;">
             <a  href="<?php echo base_url();?>index.php/Welcome/PesananSaya">Pesanan Saya </a>
             <br>
@@ -75,20 +75,16 @@
                     </form>
                     <br>
                     <!-- Datepicker Tanggal Lahir -->
-                    <div class="form-group">
-                        <label>Tanggal Lahir</label>
-                          <div class="input-group date" style="margin-left:200px;">
-                          <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-th"></span>
-                          </div>
-                          <input placeholder="" type="text" class="form-control datepicker" style="margin-left:100px;" name="tgl_awal">
-                         </div>
-                    </div>
-                  <a style="margin-top:-100px; font-size:10px;">No.Telp</a>
+
+                        <p>Tanggal Lahir</p>
+                        <input type="date" name="" value="">
+                        <br>
+                        <br>
+                  <a style="margin-top:-100px; font-size:12px;">No.Telp</a>
                   <div class="no-border" >
                     <input type="text" name="telp" placeholder="" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
                   </div>
-
+                  <br>
                   <!--  select pekerjaan-->
                 <a style="margin-top:-100px; font-size:10px;"> Profesi atau Pekerjaan</a>
                         <label for="sel1"></label>
