@@ -98,10 +98,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('page_checkout');
 		$this->load->view('footer');
 	}
-	function wishlistku(){
+	function wishlist(){
 		$this->load->view('imports');
 		$this->load->view('header');
-		$this->load->view('wishlistku');
+		$this->load->view('wishlist');
 		$this->load->view('footer');
 	}
 	function keluar(){
