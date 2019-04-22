@@ -98,10 +98,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('page_checkout');
 		$this->load->view('footer');
 	}
-	function wishlistku(){
+	function wishlist(){
 		$this->load->view('imports');
 		$this->load->view('header');
-		$this->load->view('wishlistku');
+		$this->load->view('wishlist');
 		$this->load->view('footer');
 	}
 	function keluar(){
@@ -115,6 +115,20 @@ class Welcome extends CI_Controller {
 		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('search');
+		$this->load->view('footer');
+	}
+
+	function promo(){
+		$this->load->view('imports');
+		$this->load->view('header');
+		$this->load->view('promo');
+		$this->load->view('footer');
+	}
+
+	function flash(){
+		$this->load->view('imports');
+		$this->load->view('header');
+		$this->load->view('flash_sale');
 		$this->load->view('footer');
 	}
 
@@ -250,7 +264,7 @@ class Welcome extends CI_Controller {
 
 	function register_user(){
 		$email = $this->input->post('email');
-		$nama = $this->input->post('nama');
+		$nama = $this->input->post('name');
 		$password = $this->input->post('password');
 		$alamat = $this->input->post('alamat');
 
