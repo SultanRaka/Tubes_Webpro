@@ -58,20 +58,16 @@
                     </form>
                     <br>
                     <!-- Datepicker Tanggal Lahir -->
-                    <div class="form-group">
-                        <label>Tanggal Lahir</label>
-                          <div class="input-group date" style="margin-left:200px;">
-                          <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-th"></span>
-                          </div>
-                          <input placeholder="" type="text" class="form-control datepicker" style="margin-left:100px;" name="tgl_awal">
-                         </div>
-                    </div>
-                  <a style="margin-top:-100px; font-size:10px;">No.Telp</a>
+
+                        <p>Tanggal Lahir</p>
+                        <input type="date" name="" value="">
+                        <br>
+                        <br>
+                  <a style="margin-top:-100px; font-size:12px;">No.Telp</a>
                   <div class="no-border" >
                     <input type="text" name="telp" placeholder="" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
                   </div>
-
+                  <br>
                   <!--  select pekerjaan-->
                 <a style="margin-top:-100px; font-size:10px;"> Profesi atau Pekerjaan</a>
                         <label for="sel1"></label>
@@ -225,6 +221,72 @@
                            <!-- Modal -->
                              <div class="modal fade" id="myModal" role="dialog">
                                <div class="modal-dialog">
+
+                                 <!-- Modal content-->
+                                 <div class="modal-content">
+                                   <div class="modal-header">
+                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                     <h4 class="modal-title" style="">Tambah Alamat Pengiriman</h4>
+                                   </div>
+                                   <div class="modal-body">
+                                     <form class="" action="index.html" method="post">
+                                       <p>Nama Alamat</p>
+                                       <input type="text" name="alamat" placeholder="Masukkan Nama Alamat">
+                                       <br>
+                                       <p>Nama Penerima</p>
+                                       <input type="text" name="name"placeholder="Masukkan Nama Penerima">
+                                       <br>
+                                       <p>No handphone</p>
+                                       <input type="number" name="hp" value="+62" placeholder="Masukan No handphone">
+                                       <br>
+                                       <label for="sel1">Provinsi</label>
+                                            <select class="form-control" id="sel1">
+                                              <option>Pilih Provinsi</option>
+                                              <option>Bali</option>
+                                              <option>Gorontalo</option>
+                                              <option>Jawa barat</option>
+                                              <option>Jawa Timur</option>
+                                              <option>Sumatra Selatan</option>
+                                              <option>Jawa Tengah</option>
+                                              <option>Kalimantan Barat</option>
+                                              <option>Kalimantan Timur</option>
+                                              <option>NTT</option>
+                                              <option>NTB</option>
+                                              <option>Aceh</option>
+                                              <option>Sulawesi Selatan</option>
+                                            </select>
+                                      <label for="sel1">Kota/Kabupaten</label>
+                                              <select class="form-control" id="sel1">
+                                              <option>Pilih Kota/Kabupaten</option>
+                                              </select>
+                                      <label for="sel1">Kode Pos</label>
+                                              <select class="form-control" id="sel1">
+                                              <option>Pilih Kode Pos</option>
+                                              </select>
+
+                                      <br>
+                                      <p>Alamat Lengkap</p>
+                                      <input type="text" name="alm1" value="" placeholder="Masukkan Alamat Lengkap">
+                                     </form>
+                                   </div>
+                                   <div class="modal-footer">
+                                     <button type="button" class="btn btn-default" data-dismiss="modal">Simpan Alamat</button>
+                                   </div>
+                                 </div>
+
+                               </div>
+                             </div>
+                             <div class="rounded-lg" style="background:#e8eaf6; margin-top:20; weight:50px; color:#281e5a; font-family:Karla,sans-serif; font-size:18px;">
+                               <p>Pesona Bali</p>
+                               <p>Jln Raya Bojongsoang</p>
+                             </div>
+                  </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                          <p>Kartu Kredit
+                            <br>Data kartu Kredit Anda dijamin keamanannya oleh Visa dan MasterCard
+                            <br>Anda belum menyimpan data Kartu Kredit</p>
+                        </div>
+          </div>
 
                                  <!-- Modal content-->
                                  <div class="modal-content">
