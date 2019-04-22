@@ -1,9 +1,4 @@
-<!doctype html>
-<html lang="en">
-
-
-  <body>
-		  <div class="container-fluid"style=" padding-top:80px;">
+      <div class="container-fluid"style=" padding-top:80px;">
         <div class="inner-container" >
             <div class="container-fluid">
               <a style="float:right; padding:25px 0 16px 0;" href="<?= site_url();?>promo" class="rightanchor">Lihat semua</a>
@@ -39,15 +34,14 @@
                 <div class="square">
                   <a href="#"><img  src="<?php echo base_url('img/promo/A.jpg') ?>" /></a>
                 </div>
-                <div class="square">
+                <div class="square" style="margin-top:7px;">
                   <a href="#"><img  src="<?php echo base_url('img/promo/B.jpg') ?>" /></a>
                 </div>
               </div>
-
             </div>
         </div>
 		  </div>
-      <div class="container-fluid" >
+      <div class="container-fluid paddinghometop" >
           <div class="inner-container" align="center" id="homemenus" >
             <a href="#">
               <img src="https://cdn.gramedia.com/uploads/highlighted_menu/1._buku_baru__w200_hauto.png" alt="">
@@ -83,7 +77,7 @@
             </a>
           </div>
       </div>
-      <div class="container-fluid ">
+      <div class="container-fluid paddinghometop">
         <div class="inner-container  flash-sale-container" >
           <div class="item-section">
             <div class="col-md-2 container-fluid">
@@ -195,7 +189,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid home-cards">
+      <div class="container-fluid home-cards paddinghometop">
         <div class="inner-container">
           <div class="container-fluid">
             <h1 style="float:left;">Buku-Buku Terpopuler</h1>
@@ -264,7 +258,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid home-cards">
+      <div class="container-fluid home-cards paddinghometop">
         <div class="inner-container">
           <div class="container-fluid">
             <h1 style="float:left;">Novel Paling Laris</h1>
@@ -333,7 +327,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid home-cards">
+      <div class="container-fluid home-cards paddinghometop">
         <div class="inner-container">
           <div class="container-fluid">
             <h1 style="float:left;" >Ajak si Kecil Membaca</h1>
@@ -402,7 +396,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid home-cards">
+      <div class="container-fluid home-cards paddinghometop">
         <div class="inner-container">
           <div class="container-fluid">
             <h1 style="float:left;">Komik-Komik Pilihan</h1>
@@ -471,7 +465,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid home-cards">
+      <div class="container-fluid home-cards paddinghometop">
         <div class="inner-container">
           <div class="container-fluid">
             <h1 style="float:left;" >Tampil Lebih Gaya</h1>
@@ -579,12 +573,10 @@
         </div>
       </div>
 
-  
+
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
-</html>

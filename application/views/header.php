@@ -47,7 +47,7 @@
 											<div class="col-sm-12" style="padding-top:30%">
 												<a data-toggle="modal" data-target="#logModal" href="#"> Masuk</a>
 													<a> | </a>
-												<a href="<?php echo base_url();?>index.php/Welcome/register"> Register </a>
+												<a href="<?= base_url('index.php/Welcome/register');?>"> Register </a>
 											</div>
 
 								<?php }?>
@@ -81,7 +81,7 @@
                    </div> <!-- form-group// -->
                  </form>
 								 <div class="">
-									 	Belum mendaftar? <a href="" class="btn btn-outline-primary">Daftar</a>
+									 	Belum mendaftar? <a href="<?= base_url('index.php/Welcome/register');?>" class="btn btn-outline-primary">Daftar</a>
 								 </div>
                </article>
              </div>

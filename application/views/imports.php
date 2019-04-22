@@ -170,6 +170,15 @@
       padding-bottom: 5px;
     }
 
+    .paddinghometop{
+      margin-top: 20px;
+    }
+    .footeranchorheader{
+      margin-bottom: 20px;
+    }
+    .footeranchor{
+      margin-bottom: 10px;
+    }
 
 
   </style>
