@@ -7,7 +7,7 @@
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active" >
       <div class="container-fluid" style="display:flex;">
-        <div class="container-fluid">
+        <div class="">
           <h3>Filter</h3>
           <h4>Kategori</h4>
           <div class="">
@@ -47,10 +47,67 @@
             <a href="#">Reset</a>
           </div>
         </div>
-
         <div class="container-fluid">
-          <img src="" width="100" height="100" alt="">
+          <div class="container-fluid">
+            <div class="dropdown" style="float:right;">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Terbaru
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button">Terpopuler</button>
+                <button class="dropdown-item" type="button">Harga Terendah</button>
+                <button class="dropdown-item" type="button">Harga Tertinggi</button>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <h4>Menampilkan 1-20 dari Produk</h4>
+          </div>
+          <div style="display:flex;">
+            <div class="carousel-cell">
+              <div class="card">
+                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a class="btn btn-primary">Button</a>
+                  </div>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <div class="card">
+                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a class="btn btn-primary">Button</a>
+                  </div>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <div class="card">
+                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a class="btn btn-primary">Button</a>
+                  </div>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <div class="card">
+                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a class="btn btn-primary">Button</a>
+                  </div>
+              </div>
+            </div>
+
+          </div>
         </div>
+
       </div>
     </div>
     <div id="produk" class="tab-pane fade">

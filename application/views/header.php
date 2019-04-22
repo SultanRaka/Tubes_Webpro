@@ -17,7 +17,7 @@
 						<div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:5%;">
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item" >
-								<div class="dropdown">
+								<div class="dropdown" id="headerdropdown">
 									<a class="nav-link dropdown-toggle" href="#" role="button" data-target="#navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Kategori</a>
 								</div>
 							</li>

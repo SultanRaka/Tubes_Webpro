@@ -78,7 +78,7 @@
           </div>
       </div>
       <div class="container-fluid paddinghometop">
-        <div class="inner-container  flash-sale-container" >
+        <div class="inner-container flash-sale-container" >
           <div class="item-section">
             <div class="col-md-2 container-fluid">
               <button type="button" name="button">Lihat Semua</button>

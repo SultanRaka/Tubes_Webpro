@@ -20,7 +20,7 @@
   		height: 24px;
   		font-size: 14px;
   	}
-  	.dropdown{
+  	#headerdropdown{
   		font-size: 19px;
   		top: 0;
   		padding-top: 30%;
@@ -146,10 +146,8 @@
   		margin-top: 10px;
   	}
   	#loginmenu{
-
   	 top: 60px;
-  	 left: 400px;
-  	 display: block;
+     left: 400px;
    	 padding: 0px 25px;
   	 font-family: Karla,sans-serif;
   	 box-shadow: 0 0 16px 0 rgba(0,0,0,.12), 0 16px 16px 0 rgba(0,0,0,.24);
