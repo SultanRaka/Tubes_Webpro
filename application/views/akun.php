@@ -1,7 +1,7 @@
 
     <div class="container" style="margin-top:200px; padding:10;">
       <div class="row">
-        <div class="col-md-4" style=" font-family:Karla,sans-serif;color:#281E5A;">
+        <div class="col-md-4" style=" font-family:Karla,sans-serif; font-size: 16px;color:#281E5A;">
           <div class="halaman1" style="margin-left:200px;">
             <a  href="<?php echo base_url();?>index.php/Welcome/PesananSaya">Pesanan Saya </a>
             <br>
@@ -32,13 +32,13 @@
                       <div class="rounded-lg" style="background:#e8eaf6; margin-top:20; weight:50px;  padding: 15px;heigh:50px; color:#281e5a; font-family:Karla,sans-serif; font-size:18px; contrast:12.21;">
                         <a > Berlangganan Newsletter </a>
                       </div>
-                      <a style="margin-top:-100px; font-size:10px;">Nama Lengkap</a>
+                      <a style="margin-top:-100px; font-size:10px;" >Nama Lengkap</a>
                       <div class="no-border" >
-                        <input type="text" name="name" placeholder="" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
+                        <input type="text" name="name" placeholder="" value="<?php echo $_SESSION['nama'] ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
                       </div>
                       <a style="margin-top:-100px; font-size:10px;">Email</a>
                       <div class="no-border" >
-                        <input type="text" name="email" placeholder="" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
+                        <input type="text" name="email" placeholder="" value="<?php echo $_SESSION['email'] ?>"style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
                       </div>
                       <div class=verification"">
                         <a href="#">Verifikasi Email Saya</a>
@@ -47,15 +47,20 @@
                     <p>Jenis Kelamin</p>
                         <form>
                           <label class="radio-inline" style="font-family:Karla,sans-serif;">
-                            <input type="radio" name="optradio" checked>Laki-Laki
+                            <input type="radio" name="gender" >Laki-Laki
                           </label>
                           <label class="radio-inline">
-                            <input type="radio" name="optradio">Perempuan
+                            <input type="radio" name="gender">Perempuan
                           </label>
                           <label class="radio-inline">
-                            <input type="radio" name="optradio">Rahasia
+                            <input type="radio" name="gender">Rahasia
                           </label>
                     </form>
+                    <?php
+                      if (isset($_POST['gender'])){
+                        echo $_POST['gender'];
+                      }
+                        ?>
                     <br>
                     <!-- Datepicker Tanggal Lahir -->
 
@@ -65,19 +70,20 @@
                         <br>
                   <a style="margin-top:-100px; font-size:12px;">No.Telp</a>
                   <div class="no-border" >
-                    <input type="text" name="telp" placeholder="" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
+                    <input type="text" name="" placeholder="" value="<?php echo $_SESSION['telp'] ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
                   </div>
                   <br>
                   <!--  select pekerjaan-->
                 <a style="margin-top:-100px; font-size:10px;"> Profesi atau Pekerjaan</a>
-                        <label for="sel1"></label>
-                        <select class="form-control" id="sel1">
-                        <option></option>
-                        <option>Pegawai Swasta</option>
-                        <option>Pegawai Negeri</option>
-                        <option>Dokter</option>
-                        <option>Guru/Dosen</option>
-                        <option>Pengusaha</option>
+
+                        <select name="formjob" class="form-control" id="sel1" value="<?php echo $options['job'] ?>">
+
+                        <option value="<?php echo $_SESSION['job']?>" selected="selected"><?php echo $_SESSION['job'];?></option>
+                        <option value="Pegawai Swasta">Pegawai Swasta</option>
+                        <option value="Pegawai Negeri">Pegawai Negeri</option>
+                        <option value="Dokter">Dokter</option>
+                        <option value="Guru/Dosen">Guru/Dosen</option>
+                        <option value="Pengusaha">Pengusaha</option>
                         </select>
 
 
@@ -85,59 +91,60 @@
                 <!-- Default inline 1-->
               <p style="margin-top:50px; padding:2%;">Hobi</p>
                 <div class="checkbox" style="padding:2%;">
+
                       <div class="custom-control custom-checkbox custom-control-inline">
                         <input type="checkbox" class="custom-control-input" id="defaultInline1">
-                        <label class="custom-control-label" for="defaultInline1">Kecantikan</label>
+                        <label class="custom-control-label" for="defaultInline1" onclick="clickfunction()">Kecantikan</label>
                       </div>
                       <div class="custom-control custom-checkbox custom-control-inline">
                         <input type="checkbox" class="custom-control-input" id="defaultInline2">
-                        <label class="custom-control-label" for="defaultInline2">Otomotif</label>
+                        <label class="custom-control-label" for="defaultInline2" onclick="clickfunction()">Otomotif</label>
                       </div>
                       <div class="custom-control custom-checkbox custom-control-inline">
                         <input type="checkbox" class="custom-control-input" id="defaultInline3">
-                        <label class="custom-control-label" for="defaultInline3">Membaca</label>
+                        <label class="custom-control-label" for="defaultInline3" onclick="clickfunction()">Membaca</label>
                       </div>
                 </div>
                 <div class="checkbox" style="padding:2%;">
                         <div class="custom-control custom-checkbox custom-control-inline">
                           <input type="checkbox" class="custom-control-input" id="defaultInline4">
-                          <label class="custom-control-label" for="defaultInline4">Berkebun</label>
+                          <label class="custom-control-label" for="defaultInline4" onclick="clickfunction()">Berkebun</label>
                         </div>
                         <div class="custom-control custom-checkbox custom-control-inline">
                           <input type="checkbox" class="custom-control-input" id="defaultInline5">
-                          <label class="custom-control-label" for="defaultInline5">Seni</label>
+                          <label class="custom-control-label" for="defaultInline5" onclick="clickfunction()">Seni</label>
                         </div>
                         <div class="custom-control custom-checkbox custom-control-inline">
                           <input type="checkbox" class="custom-control-input" id="defaultInline6">
-                          <label class="custom-control-label" for="defaultInline6">Teknologi</label>
+                          <label class="custom-control-label" for="defaultInline6" onclick="clickfunction()">Teknologi</label>
                         </div>
                 </div>
                 <div class="checkbox" style="padding :2%;">
                       <div class="custom-control custom-checkbox custom-control-inline">
                         <input type="checkbox" class="custom-control-input" id="defaultInline7">
-                        <label class="custom-control-label" for="defaultInline7">Wisata</label>
+                        <label class="custom-control-label" for="defaultInline7" onclick="clickfunction()">Wisata</label>
                       </div>
                       <div class="custom-control custom-checkbox custom-control-inline">
                         <input type="checkbox" class="custom-control-input" id="defaultInline8">
-                        <label class="custom-control-label" for="defaultInline8">Keterampilan</label>
+                        <label class="custom-control-label" for="defaultInline8" onclick="clickfunction()">Keterampilan</label>
                       </div>
                       <div class="custom-control custom-checkbox custom-control-inline">
                         <input type="checkbox" class="custom-control-input" id="defaultInline9">
-                        <label class="custom-control-label" for="defaultInline9">Koleksi</label>
+                        <label class="custom-control-label" for="defaultInline9" onclick="clickfunction()">Koleksi</label>
                       </div>
                 </div>
                 <div class="Checkbox" style="padding:2%;">
                       <div class="custom-control custom-checkbox custom-control-inline">
                         <input type="checkbox" class="custom-control-input" id="defaultInline10">
-                        <label class="custom-control-label" for="defaultInline10">Belanja</label>
+                        <label class="custom-control-label" for="defaultInline10" onclick="clickfunction()">Belanja</label>
                       </div>
                       <div class="custom-control custom-checkbox custom-control-inline">
                         <input type="checkbox" class="custom-control-input" id="defaultInline11">
-                        <label class="custom-control-label" for="defaultInline11">Olahraga</label>
+                        <label class="custom-control-label" for="defaultInline11" onclick="clickfunction()">Olahraga</label>
                       </div>
                       <div class="custom-control custom-checkbox custom-control-inline">
                         <input type="checkbox" class="custom-control-input" id="defaultInline12">
-                        <label class="custom-control-label" for="defaultInline12">Fashion</label>
+                        <label class="custom-control-label" for="defaultInline12" onclick="clickfunction()">Fashion</label>
                       </div>
                 </div>
 
@@ -258,10 +265,25 @@
                                       <label for="sel1">Kota/Kabupaten</label>
                                               <select class="form-control" id="sel1">
                                               <option>Pilih Kota/Kabupaten</option>
+                                              <option>Bandung</option>
+                                              <option>Mataram</option>
+                                              <option>Pontianak</option>
+                                              <option>Makassar</option>
+                                              <option>Pekanbaru</option>
+                                              <option>Yogyakarta</option>
+                                              <option>Purwokerto</option>
+                                              <option>Palembang</option>
+                                              <option>Denpasar</option>
                                               </select>
                                       <label for="sel1">Kode Pos</label>
                                               <select class="form-control" id="sel1">
                                               <option>Pilih Kode Pos</option>
+                                              <option>80811</option>
+                                              <option>80812</option>
+                                              <option>80813</option>
+                                              <option>80888</option>
+                                              <option>80851</option>
+                                              <option>80890</option>
                                               </select>
 
                                       <br>
