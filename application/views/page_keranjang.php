@@ -3,6 +3,28 @@
 	<div>
 		<p><b>Menampilkan ... Produk dalam Keranjang	</b></p>
 	</div>
+	<div class="container-fluid" style="display:flex;">
+		<div style="display:flex; float:left;">
+			<div>
+				<img src="https://cdn.gramedia.com/uploads/items/9786020622927_Meradang-Seeing-Red__w110_hauto.jpg" alt="">
+			</div>
+			<div>
+				<h4>Meradang (Seeing Red)</h4>
+				<h6>Sandra Brown</h6>
+				<h5>Soft Cover</h5>
+				<h3>Rp.90.400</h3>
+			</div>
+		</div>
+		<div style="display:flex; float:right;">
+			<div class="quantity">
+				<input type="button" value="+" class="plus">
+				<input type="number" step="1" max="99" min="1" value="1" class="qty" size="4">
+				<input type="button" value="-" class="minus">
+			</div>
+		</div>
+
+	</div>
+
 </div>
 
 	<div class="row">
