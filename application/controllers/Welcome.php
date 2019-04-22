@@ -84,17 +84,30 @@ class Welcome extends CI_Controller {
 	}
 
 	function akun(){
+		$this->load->view('imports');
 		$data['pengguna'] = $this->m_data->get_pengguna()->result();
 		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('akun',$data);
-		//$this->load->view('footer');
+	  $this->load->view('footer');
 	}
 
 	function checkout(){
 		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('page_checkout');
+		$this->load->view('footer');
+	}
+	function wishlistku(){
+		$this->load->view('imports');
+		$this->load->view('header');
+		$this->load->view('wishlistku');
+		$this->load->view('footer');
+	}
+	function keluar(){
+		$this->load->view('imports');
+		$this->load->view('header');
+		$this->load->view('home');
 		$this->load->view('footer');
 	}
 
