@@ -100,7 +100,6 @@
             <a href="https://itunes.apple.com/id/app/gramedia/id1422591223?mt=8"> <img src="https://gramedia.com/assets/app-sto   re.png" alt=""> </a>
           </div>
         </div>
-
       </div>
     </div>
   </div>

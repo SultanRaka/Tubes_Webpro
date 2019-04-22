@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-	
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -13,7 +13,7 @@
 	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 	<title>Komik</title>
-    
+
   </head>
   <body>
 	<div class="row">

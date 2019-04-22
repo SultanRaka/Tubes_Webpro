@@ -1,7 +1,7 @@
       <div class="container-fluid"style=" padding-top:80px;">
         <div class="inner-container" >
             <div class="container-fluid">
-              <a style="float:right; padding:25px 0 16px 0;" href="<?= site_url();?>promo" class="rightanchor">Lihat semua</a>
+              <a style="float:right; padding:25px 0 16px 0;" href="<?= site_url();?>/Welcome/promo" class="rightanchor">Lihat semua</a>
             </div>
             <div  id="homepromos">
               <div id="promocarousel" class="carousel slide" data-ride="carousel" style="cursor:grab; touch-action:pan-y;">
@@ -81,7 +81,7 @@
         <div class="inner-container flash-sale-container" >
           <div class="item-section">
             <div class="col-md-2 container-fluid">
-              <button type="button" name="button">Lihat Semua</button>
+              <button type="button" name="button" onclick="window.location.href='<?php site_url('index.php/Welcome/promo')  ?>'">  Lihat Semua</button>
             </div>
             <div class="col-md-10 main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "freeScroll": true }'>
               <div class="carousel-cell">
