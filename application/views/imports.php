@@ -145,18 +145,18 @@
   		background: #f0f0f0;
   		margin-top: 10px;
   	}
-  	.modal {
-     margin-top: 10%;
-  	 position: absolute;
-  	 top: 64px;
-  	 right: 1px;
+  	#loginmenu{
+
+  	 top: 60px;
+  	 left: 400px;
   	 display: block;
-   	 padding: 30px 25px;
+   	 padding: 0px 25px;
   	 font-family: Karla,sans-serif;
   	 box-shadow: 0 0 16px 0 rgba(0,0,0,.12), 0 16px 16px 0 rgba(0,0,0,.24);
   	 border-radius: 0 0 5px 5px;
   	}
-    input[type="text"],input[type="password"]{
+
+    input[type="text"],input[type="password"],input[type="number"]{
       outline: none;
       box-shadow:none !important;
       border:none;
@@ -190,7 +190,12 @@
       overflow-x: hidden;
       padding: 8px 0;
     }
-
+    .drop-item{
+      padding-top:15px;
+    }
+    .drop-text{
+      color:#281e5a;
+    }
   </style>
 
 

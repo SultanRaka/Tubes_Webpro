@@ -5,10 +5,10 @@
 				<a href="#">Bantuan</a>
 			</div>
 		</div>
-		    <div style="height:80px;" class="col-md-12 navcontainer">
+		    <div style="height:67px;" class="col-md-12 navcontainer">
 				<div class="container">
 				<div class="row" >
-					<div class="col-sm-12" style="height:7%" >
+					<div class="container-fluid"  >
 						<nav class="navbar navbar-expand-xl navbar-dark bg-black" >
 							<a class="navbar-brand" href="<?php echo base_url();?>"> <img src="<?php echo base_url();?>img/logo/gramed.svg" w alt="Gramediul.com"> </a>
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,20 +23,18 @@
 							</li>
 							<li class="nav-item">
 								<form class="form-inline">
-									<input class="form-control" type="search" placeholder="Cari buku" style="width:400px;">
-									<button class="btn" type="submit" > <span class=" glyphicon glyphicon-search" ></span></button>
+									<input class="form-control" type="search" id="searchinput" placeholder="Cari buku" style="width:400px;">
+									<button type="button"id="searchbutton" onclick="location.href='<?= base_url('index.php/Welcome/search');?>'" > <span class=" glyphicon glyphicon-search" ></span></button>
 								</form>
 							</li>
 							<li class="nav-item">
 								<!-- sudah login -->
 								<?php if($this->session->userdata('email')){?>
-									<div class="col-sm-12" style="padding-top:30%">
-												<a  href="<?php echo base_url();?>index.php/Welcome/logout"> Logout </a>
-													<a> | </a>
-												<a href="<?php echo base_url();?>index.php/Welcome/keranjang"> Keranjang </a>
-												<a> | </a>
-												<a href="<?php echo base_url();?>index.php/Welcome/akun"> Akun Saya </a>
-											</div>
+									<div class="col-sm-12" style="padding-top:40%">
+											<a href="#"data-toggle="modal" data-target="#loginmenu"> <img src="<?= base_url('img/icons/user.png')  ?>" style="max-width:25px; max-height:25px; padding-bottom:7px;"> </a>
+											<a style="padding:0 10px 0;"> | </a>
+											<a href="<?= base_url('index.php/Welcome/keranjang');?>"> <img src="<?= base_url('img/icons/cart.png')  ?>" style="max-width:25px; max-height:25px; padding-bottom:7px;"> </a>
+									</div>
 
 								<!--belum login-->
 
@@ -59,7 +57,8 @@
 				</div>
 			</div>
 				</div>
-			<div class="modal fade" id="logModal">
+
+			<div class="modal fade" id="logModal" style="z-index:9999;">
          <div class="modal-dialog">
            <div class="modal-content">
              <div class="card">
@@ -86,33 +85,48 @@
            </div>
          </div>
        </div>
-			 <div class="dropdown-menu"  id="navbarDropdown" aria-labelledby="navbarDropdown" style="z-index:9999; top:90px; position:sticky; width:100%;">
+			 <div class="modal fade" id="loginmenu">
+					 <div class="modal-dialog">
+						 <div class="modal-content" style="max-width:300px;">
+							 <div class="card" >
+								 <article class="card-body">
+									 <h2>Halo, <b style="color:lightblue;"> <?= $_SESSION['nama']; ?> </b> </h2>
+									 <h3><a href="<?php echo base_url();?>index.php/Welcome/akun"> Pesanan Saya </a></h3>
+									 <h3><a href="<?php echo base_url();?>index.php/Welcome/akun"> Akun Saya</a></h3>
+									 <h3><a href="<?php echo base_url();?>index.php/Welcome/akun"> Wishlist Saya</a></h3>
+									 <h3><a  href="<?php echo base_url();?>index.php/Welcome/logout"> Keluar</a></h3>
+								 </article>
+							 </div>
+						 </div>
+					 </div>
+				 </div>
+		 <div class="dropdown-menu"  id="navbarDropdown" aria-labelledby="navbarDropdown" style="z-index:9999; top:90px; position:sticky; width:100%;">
 				 <div class="inner-container">
-					 <div class="container-fluid">
-					 	<div class="drop-container">
+					 <div class="container-fluid" style="display:flex; padding: 1% 0 1%;" >
+					 	<div class="drop-container" style="border-right:1px solid black; padding-right:50px;">
 					 		<div class="drop-item">
-					 			<a href="#">BUKU</a>
+					 			<a href="#" class="drop-text"><b>BUKU</b></a>
 					 		</div>
 							<div class="drop-item">
-								<a href="#">EBOOK</a>
+								<a href="#" class="drop-text"><b>EBOOK</b></a>
 							</div>
 							<div class="drop-item">
-								<a href="#">FASHION & AKSESORIS</a>
+								<a href="#" class="drop-text"><b>FASHION & AKSESORIS</b></a>
 							</div>
 							<div class="drop-item">
-								<a href="#">MAJALAH</a>
+								<a href="#" class="drop-text"><b>MAJALAH</b></a>
 							</div>
 							<div class="drop-item">
-								<a href="#">OLAHRAGA</a>
+								<a href="#" class="drop-text"> <b>OLAHRAGA</b> </a>
 							</div>
 							<div class="drop-item">
-								<a href="#">STATIONARY, SEKOLAH & KANTOR</a>
+								<a href="#" class="drop-text"><b>STATIONARY, SEKOLAH & KANTOR</b></a>
 							</div>
 							<div class="drop-item">
-								<a href="#">TEKNOLOGI</a>
+								<a href="#" class="drop-text"><b>TEKNOLOGI</b></a>
 							</div>
-							<div class="drop-item">
-								<a href="#">MAINAN & HOBI</a>
+							<div class="drop-item" style="padding-bottom:150px;">
+								<a href="#" class="drop-text"><b>MAINAN & HOBI</b></a>
 							</div>
 					 	</div>
 						<div class="drop-container">
@@ -120,6 +134,6 @@
 						</div>
 					 </div>
 				 </div>
-			 </div>
+			</div>
 
-			 <body>
+<body>
