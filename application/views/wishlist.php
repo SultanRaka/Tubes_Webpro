@@ -17,7 +17,7 @@
 
   </head>
   <body>
-    <div class="container">
+    <div class="container" style="padding-top:10%;">
       <div class="row">
         <div class="col-md-4" style=" font-family:Karla,sans-serif;color:#281E5A;margin-top:200px;">
           <div class="halaman1" style="margin-left:200px;">

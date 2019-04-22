@@ -264,7 +264,7 @@ class Welcome extends CI_Controller {
 
 	function register_user(){
 		$email = $this->input->post('email');
-		$nama = $this->input->post('nama');
+		$nama = $this->input->post('name');
 		$password = $this->input->post('password');
 		$alamat = $this->input->post('alamat');
 
