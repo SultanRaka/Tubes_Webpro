@@ -41,17 +41,14 @@
 
           </div>
           <div class="">
-            <h5>Meradang (Seeing Red)</h5>
-						<h6>Sandra Brown</h6>
-						<h5>Soft Cover</h5>
-						<h3>Rp.90.400</h3>
+          <!-- untuk judul buku dll -->
 
           </div>
   				</br>
   				<a href="#">lihat detail</a>
           <br>
           <br>
-          <button type="button" class="btn btn-light" style="margin-right:500px;">
+          <button type="button" class="btn btn-light" style="margin-left:500px;">
             <span aria-hidden="true">&times;</span> Hapus Wishlist
             </button>
         </div>

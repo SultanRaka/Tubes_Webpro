@@ -295,6 +295,12 @@ class Welcome extends CI_Controller {
 					'nama' => $row->nama,
 					'alamat' => $row->alamat,
 					'email' => $email,
+					'gender'=>$row->gender,
+					'birthdate'=>$row->birtdate,
+					'telp'=>$row->telp,
+					'job'=>$row->job,
+					'hobi'=>$row->hobi,
+					'favbook'=>$row->favbook,
 					'status' => "login"
 					);
 			}
@@ -316,6 +322,23 @@ class Welcome extends CI_Controller {
 	function logout(){
 		$this->session->sess_destroy();
 		redirect(base_url());
+	}
+
+	function showbooklist(){
+		$cek = $this->m_data->cek_log("buku",$where)->num_rows();
+		$query = $this->db->query("SELECT * FROM buku where id = '$id'");
+		foreach ($query->result() as $row){
+		$data_session = array(
+			'id'=>$row->id,
+			'judul'=>$row->judul,
+			'author'=>$row->author,
+			'kategori'=>$row->kategori,
+			'deskripsi'=>$row->deskripsi,
+			'harga'=>$row->harga,
+			'format'=>$row->format
+		);
+	}
+
 	}
 
 }
