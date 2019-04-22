@@ -19,7 +19,7 @@
   <body>
     <div class="container" style="padding-top:10%;">
       <div class="row">
-        <div class="col-md-4" style=" font-family:Karla,sans-serif;color:#281E5A;margin-top:200px;">
+        <div class="col-md-4" style=" font-family:Karla,sans-serif;color:#281E5A;margin-top:150px; font-size:16px;">
           <div class="halaman1" style="margin-left:200px;">
             <a  href="<?php echo base_url();?>index.php/Welcome/PesananSaya">Pesanan Saya </a>
             <br>
@@ -34,14 +34,16 @@
             <a  href="<?php echo base_url();?>index.php/Welcome/keluar"> Keluar </a>
           </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8" style="margin-top:-40px;">
           <div class="">
+
 
             <a href="<?php echo base_url('index.php/welcome/heil')?>"><img src="<?php echo base_url('img/buku/sejarah/heil.jpg'); ?>" width="100" height="150" style="margin-top:200px;"></a>
 
           </div>
           <div class="">
           <!-- untuk judul buku dll -->
+          <?php echo $_SESSION['judul'] ?>
 
           </div>
   				</br>

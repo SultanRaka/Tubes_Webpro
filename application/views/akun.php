@@ -1,7 +1,7 @@
 
     <div class="container" style="margin-top:200px; padding:10;">
       <div class="row">
-        <div class="col-md-4" style=" font-family:Karla,sans-serif;color:#281E5A;">
+        <div class="col-md-4" style=" font-family:Karla,sans-serif; font-size: 16px;color:#281E5A;">
           <div class="halaman1" style="margin-left:200px;">
             <a  href="<?php echo base_url();?>index.php/Welcome/PesananSaya">Pesanan Saya </a>
             <br>
@@ -265,10 +265,25 @@
                                       <label for="sel1">Kota/Kabupaten</label>
                                               <select class="form-control" id="sel1">
                                               <option>Pilih Kota/Kabupaten</option>
+                                              <option>Bandung</option>
+                                              <option>Mataram</option>
+                                              <option>Pontianak</option>
+                                              <option>Makassar</option>
+                                              <option>Pekanbaru</option>
+                                              <option>Yogyakarta</option>
+                                              <option>Purwokerto</option>
+                                              <option>Palembang</option>
+                                              <option>Denpasar</option>
                                               </select>
                                       <label for="sel1">Kode Pos</label>
                                               <select class="form-control" id="sel1">
                                               <option>Pilih Kode Pos</option>
+                                              <option>80811</option>
+                                              <option>80812</option>
+                                              <option>80813</option>
+                                              <option>80888</option>
+                                              <option>80851</option>
+                                              <option>80890</option>
                                               </select>
 
                                       <br>

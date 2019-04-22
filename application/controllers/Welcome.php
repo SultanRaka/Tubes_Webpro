@@ -100,6 +100,7 @@ class Welcome extends CI_Controller {
 	}
 	function wishlist(){
 		$this->load->view('imports');
+		$data['buku'] = $this->m_data->get_buku()->result();
 		$this->load->view('header');
 		$this->load->view('wishlist');
 		$this->load->view('footer');
