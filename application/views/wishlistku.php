@@ -12,7 +12,7 @@
 
 </head>
 <body>
-	<div class="container" style="margin-bottom : 100px; padding:10px;padding-top:100px; margin-top: -150px;padding-top:100px;">
+	<div class="container" style="margin-bottom : 100px; padding:10px;padding-top:100px; margin-top: 50px;padding-top:100px;">
 		<div class="row">
 			<div class="col-md-8">
 				<h3 style="margin-left: 110px; font-family: Karla,sans-serif; font-size:16px; color: #281E5A;">Menampilkan <b>1 produk</b> dalam keranjang</h3><br>

@@ -97,6 +97,18 @@ class Welcome extends CI_Controller {
 		$this->load->view('page_checkout');
 		$this->load->view('footer');
 	}
+	function wishlistku(){
+		$this->load->view('imports');
+		$this->load->view('header');
+		$this->load->view('wishlistku');
+		$this->load->view('footer');
+	}
+	function keluar(){
+		$this->load->view('imports');
+		$this->load->view('header');
+		$this->load->view('home');
+		$this->load->view('footer');
+	}
 
 	/** untuk load page buku sejarah */
 

@@ -30,7 +30,7 @@
             <br>
             <br>
             <br>
-            <a  href="<?php echo base_url();?>index.php/Welcome/home"> Keluar </a>
+            <a  href="<?php echo base_url();?>index.php/Welcome/keluar"> Keluar </a>
           </div>
 
         </div>
