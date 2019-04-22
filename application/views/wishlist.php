@@ -35,7 +35,18 @@
           </div>
         </div>
         <div class="col-md-8">
-          <a href="<?php echo base_url('index.php/welcome/heil')?>"><img src="<?php echo base_url('img/buku/sejarah/heil.jpg'); ?>" width="100" height="150" style="margin-top:200px;"></a>
+          <div class="">
+
+            <a href="<?php echo base_url('index.php/welcome/heil')?>"><img src="<?php echo base_url('img/buku/sejarah/heil.jpg'); ?>" width="100" height="150" style="margin-top:200px;"></a>
+            
+          </div>
+          <div class="">
+            <h5>Meradang (Seeing Red)</h5>
+						<h6>Sandra Brown</h6>
+						<h5>Soft Cover</h5>
+						<h3>Rp.90.400</h3>
+
+          </div>
   				</br>
   				<a href="#">lihat detail</a>
           <br>
