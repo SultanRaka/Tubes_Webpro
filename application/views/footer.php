@@ -1,6 +1,6 @@
 <footer id="footer">
   <div class="footer-top paddingtopuniversal">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row footerpaddingbottom paddinguniversal">
         <div class="col-lg-6 footerbackground">
             Jadilah yang pertama tahu berita terbaru event dan penawaran spesial kami <br>

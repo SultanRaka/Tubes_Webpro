@@ -45,6 +45,6 @@ function PesanRegister() {
 				<td><input type="submit" value="Register" onclick = "PesanRegister()"></td>
 			</tr>
 		</table>
-	</form>	
+	</form>
 </body>
 </html>
