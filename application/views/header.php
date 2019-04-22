@@ -153,7 +153,7 @@
 			</div>
 
 		</div>
-		    <div class="col-md-12 navcontainer">
+		    <div style="height:80px;" class="col-md-12 navcontainer">
 				<div class="container">
 				<div class="row" >
 					<div class="col-sm-12" style="height:7%" >
@@ -186,6 +186,8 @@
 												<a href="<?php echo base_url();?>index.php/Welcome/logout"> Logout </a>
 													<a> | </a>
 												<a href="<?php echo base_url();?>index.php/Welcome/keranjang"> Keranjang </a>
+												<a> | </a>
+												<a href="<?php echo base_url();?>index.php/Welcome/akun"> Akun Saya </a>
 											</div>
 
 								<!--belum login-->
