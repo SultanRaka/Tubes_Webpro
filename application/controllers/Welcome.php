@@ -79,15 +79,16 @@ class Welcome extends CI_Controller {
 		$data2['orderan'] = $this->m_data->get_order()->result();
 		$this->load->view('imports');
 		$this->load->view('header');
-		$this->load->view('wishlistku',$data, $data2);
+		$this->load->view('page_keranjang',$data, $data2);
 		$this->load->view('footer');
 	}
 
 	function akun(){
+		$this->load->view('imports');
 		$data['pengguna'] = $this->m_data->get_pengguna()->result();
 		$this->load->view('header');
 		$this->load->view('akun',$data);
-		//$this->load->view('footer');
+	  $this->load->view('footer');
 	}
 
 	function checkout(){
