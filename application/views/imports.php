@@ -13,10 +13,9 @@
   	}
   	.navbar{
   		height: 1%;
+      z-index: 100;
   	}
-  	.fixed-top{
-  		margin-bottom: 10%;
-  	}
+
   	.miniheader-item{
   		height: 24px;
   		font-size: 14px;
@@ -180,6 +179,17 @@
       margin-bottom: 10px;
     }
 
+    .sidenav {
+      padding-top:10%;
+      top:100px;
+      width: 310px;
+      height: 120px;
+      position: -webkit-sticky;
+      position: sticky;
+      background: #eee;
+      overflow-x: hidden;
+      padding: 8px 0;
+    }
 
   </style>
 
