@@ -8,7 +8,7 @@ class M_data extends CI_Model{
 	function get_wishlist(){
 		return $this->db->get('wishlist');
 	}
-	
+
 	function register_user($data,$table){
 		$this->db->insert($table,$data);
 	}
@@ -41,6 +41,13 @@ class M_data extends CI_Model{
 
 	function wipe_order(){
 		return $this->db->empty_table('orderan');
+	}
+
+	public function update_pengguna($table,$email,$data_update){
+
+		$this->db->where('email', $email);
+ 	 $update = $this->db->update($table,$data_update);
+
 	}
 
 

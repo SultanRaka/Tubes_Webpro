@@ -43,7 +43,7 @@
           </div>
           <div class="">
           <!-- untuk judul buku dll -->
-          
+          <h2 value="<?php echo $buku->nama ?>"></h2>
 
           </div>
   				</br>

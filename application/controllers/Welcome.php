@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	 function __construct(){
 		parent::__construct();
-		$this->load->model('m_data');
+		$this->load->model('M_data');
 	}
 
 	/** untuk load page utama */
@@ -31,6 +31,39 @@ class Welcome extends CI_Controller {
 		$this->load->view('page_sejarah');
 		$this->load->view('footer');
 	}
+
+
+	public function update_pengguna($email){
+    $table = 'pengguna';
+		$nama=$this->input->post('nama');
+		$email=$this->input->post('email');
+		$birthdate=$this->input->post('birthdate');
+		$gender=$this->input->post('gender');
+		$telp=$this->input->post('telp');
+		$job=$this->input->post('job');
+		$hobi=$this->input->post('hobi');
+		$favbook=$this->input->post('favbook');
+    $data_update = array (
+
+      'email' => $email,
+			'pass' => "123456",
+			'nama' => $nama,
+			'alamat' =>"aga",
+			'gender' => $gender,
+			  'birthdate' => $birthdate,
+			'telp' => $telp,
+			'job' => $job,
+			'hobi' => $hobi,
+			'favbook'=>$favbook
+    );
+    $update = $this->M_data->update_pengguna($table,$email,$data_update);
+		if ($update) {
+			echo "true";
+			// code...
+		}
+		echo "gagal";
+}
+
 	public function politik(){
 		$this->load->view('imports');
 
@@ -110,7 +143,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('imports');
 		$data['buku'] = $this->m_data->get_buku()->result();
 		$this->load->view('header');
-		$this->load->view('wishlist');
+		$this->load->view('wishlist',$data);
 		$this->load->view('footer');
 	}
 	function keluar(){
@@ -302,6 +335,7 @@ class Welcome extends CI_Controller {
 			foreach ($query->result() as $row){
 				$data_session = array(
 					'nama' => $row->nama,
+					'pass' => $row->pass,
 					'alamat' => $row->alamat,
 					'email' => $email,
 					'gender'=>$row->gender,
@@ -313,7 +347,7 @@ class Welcome extends CI_Controller {
 					'status' => "login"
 					);
 			}
-			
+
 
 
 

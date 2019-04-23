@@ -27,206 +27,107 @@
                       </div>
                   </nav>
 
-                  <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent" style="margin-top:20px;">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                      <div class="rounded-lg" style="background:#e8eaf6; margin-top:20; weight:50px;  padding: 15px;heigh:50px; color:#281e5a; font-family:Karla,sans-serif; font-size:18px; contrast:12.21;">
-                        <a > Berlangganan Newsletter </a>
-                      </div>
-                      <a style="margin-top:-100px; font-size:10px;" >Nama Lengkap</a>
-                      <div class="no-border" >
-                        <input type="text" name="nama" placeholder="" value="<?php echo $_SESSION['nama'] ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
-                      </div>
-                      <a style="margin-top:-100px; font-size:10px;">Email</a>
-                      <div class="no-border" >
-                        <input type="text" name="email" placeholder="" value="<?php echo $_SESSION['email'] ?>"style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
-                      </div>
-                      <div class=verification"">
-                        <a href="#">Verifikasi Email Saya</a>
-                      </div>
-                      <br>
-                    <p>Jenis Kelamin</p>
-                        <form>
-                          <label class="radio-inline" style="font-family:Karla,sans-serif;">
-                            <input type="radio" name="gender" checked=<?php if($row['gender'] = "Laki-Laki") { echo "true"; }?>  value="Laki=Laki">Laki-Laki
-                          </label>
+                          <form class="" action="<?php echo site_url('Welcome/update_pengguna/'.$_SESSION['email']);?>" method="post">
+                              <div class="rounded-lg" style="background:#e8eaf6; margin-top:20; weight:50px;  padding: 15px;heigh:50px; color:#281e5a; font-family:Karla,sans-serif; font-size:18px; contrast:12.21;">
+                                <a > Berlangganan Newsletter </a>
+                              </div>
+                                <a style="margin-top:-100px; font-size:10px;" >Nama Lengkap</a>
+                                <div class="no-border" >
+                                    <input type="text" name="nama" placeholder="" value="<?php echo $_SESSION['nama']; ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
+                                </div>
+                                    <a style="margin-top:-100px; font-size:10px;">Email</a>
+                                <div class="no-border" >
+                                    <input type="text" name="email" placeholder="" value="<?php echo $_SESSION['email']; ?>"style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
+                                </div>
+                                <div class=verification"">
+                                    <a href="#">Verifikasi Email Saya</a>
+                                </div>
+                                <br>
+                                  <p>Jenis Kelamin</p>
 
-                          <label class="radio-inline">
-                            <input type="radio" name="gender" checked=<?php if($row['gender'] = "Rahasia") { echo "true"; }?>  value="Laki=Laki">Rahasia
-                          </label>
-                          <label class="radio-inline">
-                            <input type="radio" name="gender" checked=<?php if($row['gender'] = "Perempuan") { echo "true"; }?>  value="Perempuan">Perempuan
-                          </label>
-                    </form>
+                                      <label class="radio-inline" style="font-family:Karla,sans-serif;">
+                                          <input type="radio" name="gender" checked=<?php if($row['gender'] = "Laki-Laki") { echo "true"; }?>  value="Laki=Laki">Laki-Laki
+                                        </label>
 
-                    <br>
+                                        <label class="radio-inline">
+                                          <input type="radio" name="gender" checked=<?php if($row['gender'] = "Rahasia") { echo "true"; }?>  value="Laki=Laki">Rahasia
+                                        </label>
+                                        <label class="radio-inline">
+                                          <input type="radio" name="gender" checked=<?php if($row['gender'] = "Perempuan") { echo "true"; }?>  value="Perempuan">Perempuan
+                                        </label>
+                                        <br>
                     <!-- Datepicker Tanggal Lahir -->
 
-                        <p>Tanggal Lahir</p>
-                        <input type="date" name="">
-                        <br>
-                        <br>
-                  <a style="margin-top:-100px; font-size:12px;">No.Telp</a>
-                  <div class="no-border" >
-                    <input type="text" name="" placeholder="" value="<?php echo $_SESSION['telp'] ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
-                  </div>
-                  <br>
+                                <p>Tanggal Lahir</p>
+                                <input type="date" name="" value="<?php echo $_SESSION['birthdate'] ?>">
+                                  <br>
+                                  <br>
+                                  <a style="margin-top:-100px; font-size:12px;">No.Telp</a>
+                                  <div class="no-border" >
+                                    <input type="text" name="" placeholder="" value="<?php echo $_SESSION['telp']; ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
+                                  </div>
+                                  <br>
                   <!--  select pekerjaan-->
-                <a style="margin-top:-100px; font-size:10px;"> Profesi atau Pekerjaan</a>
+                                <a style="margin-top:-100px; font-size:10px;"> Profesi atau Pekerjaan</a>
 
-                        <select name="formjob" class="form-control" id="sel1" value="<?php echo $options['job'] ?>">
+                                <select name="formjob" class="form-control" id="sel1" value="<?php echo $options['job'] ?>">
 
-                        <option value="<?php echo $_SESSION['job']?>" selected="selected"><?php echo $_SESSION['job'];?></option>
-                        <option value="Pegawai Swasta">Pegawai Swasta</option>
-                        <option value="Pegawai Negeri">Pegawai Negeri</option>
-                        <option value="Dokter">Dokter</option>
-                        <option value="Guru/Dosen">Guru/Dosen</option>
-                        <option value="Pengusaha">Pengusaha</option>
-                        </select>
+                                    <option value="<?php echo $_SESSION['job']?>" selected="selected"><?php echo $_SESSION['job'];?></option>
+                                    <option value="Pegawai Swasta">Pegawai Swasta</option>
+                                    <option value="Pegawai Negeri">Pegawai Negeri</option>
+                                    <option value="Dokter">Dokter</option>
+                                    <option value="Guru/Dosen">Guru/Dosen</option>
+                                    <option value="Pengusaha">Pengusaha</option>
+                              </select>
 
 
                 <!-- Checkbox Hobi -->
                 <!-- Default inline 1-->
-              <p style="margin-top:50px; padding:2%;">Hobi</p>
-                <div class="checkbox" style="padding:2%;">
+                <br>
+                            <p style="margin-top:50px; padding:2%;">Hobi</p>
+                            <select name="formhobi" class="form-control" id="sel1" value="<?php echo $options['hobi']; ?>">
 
-                      <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline1">
-                        <label class="custom-control-label" for="defaultInline1" onclick="clickfunction()">Kecantikan</label>
-                      </div>
-                      <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline2">
-                        <label class="custom-control-label" for="defaultInline2" onclick="clickfunction()">Otomotif</label>
-                      </div>
-                      <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline3">
-                        <label class="custom-control-label" for="defaultInline3" onclick="clickfunction()">Membaca</label>
-                      </div>
-                </div>
-                <div class="checkbox" style="padding:2%;">
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                          <input type="checkbox" class="custom-control-input" id="defaultInline4">
-                          <label class="custom-control-label" for="defaultInline4" onclick="clickfunction()">Berkebun</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                          <input type="checkbox" class="custom-control-input" id="defaultInline5">
-                          <label class="custom-control-label" for="defaultInline5" onclick="clickfunction()">Seni</label>
-                        </div>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                          <input type="checkbox" class="custom-control-input" id="defaultInline6">
-                          <label class="custom-control-label" for="defaultInline6" onclick="clickfunction()">Teknologi</label>
-                        </div>
-                </div>
-                <div class="checkbox" style="padding :2%;">
-                      <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline7">
-                        <label class="custom-control-label" for="defaultInline7" onclick="clickfunction()">Wisata</label>
-                      </div>
-                      <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline8">
-                        <label class="custom-control-label" for="defaultInline8" onclick="clickfunction()">Keterampilan</label>
-                      </div>
-                      <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline9">
-                        <label class="custom-control-label" for="defaultInline9" onclick="clickfunction()">Koleksi</label>
-                      </div>
-                </div>
-                <div class="Checkbox" style="padding:2%;">
-                      <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline10">
-                        <label class="custom-control-label" for="defaultInline10" onclick="clickfunction()">Belanja</label>
-                      </div>
-                      <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline11">
-                        <label class="custom-control-label" for="defaultInline11" onclick="clickfunction()">Olahraga</label>
-                      </div>
-                      <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInline12">
-                        <label class="custom-control-label" for="defaultInline12" onclick="clickfunction()">Fashion</label>
-                      </div>
-                </div>
+                                <option value="<?php echo $_SESSION['hobi']?>" selected="selected"><?php echo $_SESSION['hobi'];?></option>
+                                <option value="Kecantikan">Kecantikan</option>
+                                <option value="Otomotif">Memancing</option>
+                                <option value="Membaca">Berkebun</option>
+                                <option value="Berkebun">Olahraga</option>
+                                <option value="Olahraga">melukis</option>
+                          </select>
 
-              <br>
+                                  <br>
               <!--chckbox kategory buku favorite  -->
-              <p>Kategori Buku Favorite</p>
-              <div class="checkbox" style="padding:2%;">
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                      <input type="checkbox" class="custom-control-input" id="defaultInlinea">
-                      <label class="custom-control-label" for="defaultInlinea">Agama</label>
-                    </div>
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                      <input type="checkbox" class="custom-control-input" id="defaultInlineb">
-                      <label class="custom-control-label" for="defaultInlineb">Buku Anak</label>
-                    </div>
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                      <input type="checkbox" class="custom-control-input" id="defaultInlinec">
-                      <label class="custom-control-label" for="defaultInlinec">Fiksi</label>
-                    </div>
-              </div>
-              <div class="checkbox" style="padding:2%;">
-                      <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInlined">
-                        <label class="custom-control-label" for="defaultInlined">Kamus</label>
-                      </div>
-                      <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInlinee">
-                        <label class="custom-control-label" for="defaultInlinee">Novel</label>
-                      </div>
-                      <div class="custom-control custom-checkbox custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" id="defaultInlinef">
-                        <label class="custom-control-label" for="defaultInlinef">Travel</label>
-                      </div>
-              </div>
-              <div class="checkbox" style="padding :2%;">
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                      <input type="checkbox" class="custom-control-input" id="defaultInlineg">
-                      <label class="custom-control-label" for="defaultInlineg">Sains</label>
-                    </div>
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                      <input type="checkbox" class="custom-control-input" id="defaultInlineh">
-                      <label class="custom-control-label" for="defaultInlineh">Komik</label>
-                    </div>
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                      <input type="checkbox" class="custom-control-input" id="defaultInlinei">
-                      <label class="custom-control-label" for="defaultInlinei">Horor</label>
-                    </div>
-              </div>
-              <div class="Checkbox" style="padding:2%;">
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                      <input type="checkbox" class="custom-control-input" id="defaultInlinej">
-                      <label class="custom-control-label" for="defaultInlinej">Biografi</label>
-                    </div>
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                      <input type="checkbox" class="custom-control-input" id="defaultInlinek">
-                      <label class="custom-control-label" for="defaultInlinek">Hukum</label>
-                    </div>
-                    <div class="custom-control custom-checkbox custom-control-inline">
-                      <input type="checkbox" class="custom-control-input" id="defaultInlinel">
-                      <label class="custom-control-label" for="defaultInlinel">Kuliner</label>
-                    </div>
-              </div>
-              <br>
-              <!-- button simpan -->
-              <button type="button" class="btn btn-pink" style="background: #e61e64; color: #FFFFFF;font-family:Karla, sans-serif; margin: 15px 0px; padding: 10px 45px; ">
-                  SIMPAN
-              </button>
-              <br>
-              <a href="#">Ubah Kata Sandi</a>
+                                    <p>Kategori Buku Favorite</p>
+                                    <select name="formbookfav" class="form-control" id="sel2" value="<?php echo $options['favbook']; ?>">
 
+                                        <option value="<?php echo $_SESSION['favbook']?>" selected="selected"><?php echo $_SESSION['favbook'];?></option>
+                                        <option value="Pegawai Swasta">Buku Anak</option>
+                                        <option value="Pegawai Negeri">Agama</option>
+                                        <option value="Dokter">Fiksi</option>
+                                        <option value="Guru/Dosen">Novel</option>
+                                        <option value="Pengusaha">Horror</option>
+                                  </select>
+
+                                            <br>
+              <!-- button simpan -->
+                                <button type="submit" class="btn btn-pink" style="background: #e61e64; color: #FFFFFF;font-family:Karla, sans-serif; margin: 15px 0px; padding: 10px 45px; ">
+                                    SIMPAN
+                                  </button>
+                                  <br>
+                                  <a href="#">Ubah Kata Sandi</a>
+              </form>
               </div>
-              <!-- ini untuk tab halaman -->
-              <!-- alamat -->
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="padding-top:-100px;">
-                      <!-- <button type="button" class="btn btn-pink" style="background: #281e5a;color: #FFFFFF;font-family:Karla, sans-serif; margin-left:600px;">
-                          Tambah Alamat
-                      </button>
-                       -->
-                       <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background: #281e5a;color: #FFFFFF;font-family:Karla, sans-serif; margin-left:600px;">
-                       Tambah Alamat</button>
+
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="margin-top:-100px;">
+aaaa
+                       <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background: #281e5a;color: #FFFFFF;font-family:Karla, sans-serif; margin-top:-1400px;margin-left:500px;">
+                       Tambah Alamat
+                     </button>
 
                            <!-- Modal -->
                              <div class="modal fade" id="myModal" role="dialog">
                                <div class="modal-dialog">
-
                                  <!-- Modal content-->
                                  <div class="modal-content">
                                    <div class="modal-header">
@@ -297,16 +198,16 @@
                                </div>
                              </div>
                              <div class="rounded-lg" style="background:#e8eaf6; margin-top:20; weight:50px; color:#281e5a; font-family:Karla,sans-serif; font-size:18px;">
-                               <p>Pesona Bali</p>
-                               <p>Jln Raya Bojongsoang</p>
+                              <p value="<?php echo $_SESSION['alamat']; ?>"></p>
                              </div>
                   </div>
+                  <!-- </div> -->
                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                           <p>Kartu Kredit
                             <br>Data kartu Kredit Anda dijamin keamanannya oleh Visa dan MasterCard
                             <br>Anda belum menyimpan data Kartu Kredit</p>
                         </div>
-          </div>
+
           </div>
           </div>
         </div>
