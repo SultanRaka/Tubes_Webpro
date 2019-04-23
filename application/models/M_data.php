@@ -1,6 +1,9 @@
 <?php
 
 class M_data extends CI_Model{
+	function get_data($table){
+			return $this->db->get($table)->result();
+	}
 	function get_buku(){
 		return $this->db->get('buku');
 	}
@@ -15,9 +18,6 @@ class M_data extends CI_Model{
 
 	function get_pengguna(){
 		return $this->db->get('pengguna');
-	}
-	function get_buku(){
-		return $this->db->get('buku');
 	}
 
 	function detil_pengguna($email){
@@ -39,6 +39,25 @@ class M_data extends CI_Model{
 
 	function wipe_order(){
 		return $this->db->empty_table('orderan');
+	}
+
+	function get_join($from,$join,$where){
+		$this->db->select('*');
+		$this->db->from($from);
+		$this->db->join($join, $where);
+		return $this->db->get()->result();
+	}
+
+	function get_by_id($id,$col,$tabname){
+		$this->db->where($col,$id);
+		$data = $this->db->get($tabname);
+		return $data->row_array();
+	}
+	function search_by_id($query,$filter,$tabname){
+		$this->db->select('*');
+		$this->db->from($tabname);
+		$this->db->like($filter, $query);
+		return $this->db->get()->row_array();
 	}
 
 

@@ -63,7 +63,7 @@ class Welcome extends CI_Controller {
 
 
 	function register(){
-				$this->load->view('imports');
+		$this->load->view('imports');
 		$this->load->view('page_register');
 	}
 
@@ -74,20 +74,19 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	function bookpage(){
+	function bookpage($id){
+		$data['book'] = $this->m_data->get_by_id($id,'id_buku','buku');
 		$this->load->view('imports');
 		$this->load->view('header');
-		$this->load->view('bookpage');
+		$this->load->view('bookpage',$data);
 		$this->load->view('footer');
 	}
 
 
 	function keranjang(){
-		$data['pengguna'] = $this->m_data->get_pengguna()->result();
-		$data2['orderan'] = $this->m_data->get_order()->result();
 		$this->load->view('imports');
 		$this->load->view('header');
-		$this->load->view('page_keranjang',$data, $data2);
+		$this->load->view('page_keranjang');
 		$this->load->view('footer');
 	}
 
@@ -121,11 +120,15 @@ class Welcome extends CI_Controller {
 	}
 
 	function search(){
+		$query = $this->input->post('search-bar');
+		$data['buku'] = $this->m_data->get_by_id($query,'nama','buku');
 		$this->load->view('imports');
 		$this->load->view('header');
-		$this->load->view('search');
+		$this->load->view('search',$data);
 		$this->load->view('footer');
 	}
+
+
 
 	function promo(){
 		$this->load->view('imports');
@@ -248,23 +251,23 @@ class Welcome extends CI_Controller {
 
 
 	/** untuk fungsi */
-	function tambah_aksi(){
-		$judul = $this->input->post('judul');
-		$harga = $this->input->post('harga');
+	// function tambah_aksi(){
+	// 	$judul = $this->input->post('judul');
+	// 	$harga = $this->input->post('harga');
+	//
+	// 	$data = array(
+	// 		'judul' => $judul,
+	// 		'harga' => $harga
+	// 		);
+	// 	$this->m_data->input_data($data,'orderan');
+	// 	redirect(base_url('index.php/Welcome/keranjang'));
+	// }
 
-		$data = array(
-			'judul' => $judul,
-			'harga' => $harga
-			);
-		$this->m_data->input_data($data,'orderan');
-		redirect(base_url('index.php/Welcome/keranjang'));
-	}
-
-	function hapus($id){
-		$where = array('id' => $id);
-		$this->m_data->hapus_data($where,'orderan');
-		redirect(base_url('index.php/Welcome/keranjang'));
-	}
+	// function hapus($id){
+	// 	$where = array('id' => $id);
+	// 	$this->m_data->hapus_data($where,'orderan');
+	// 	redirect(base_url('index.php/Welcome/keranjang'));
+	// }
 
 	function wipe(){
 		$this->m_data->wipe_order();

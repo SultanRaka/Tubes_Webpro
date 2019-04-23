@@ -22,9 +22,9 @@
 								</div>
 							</li>
 							<li class="nav-item">
-								<form class="form-inline">
-									<input class="form-control" type="search" id="searchinput" placeholder="Cari buku" style="width:400px;">
-									<button type="button"id="searchbutton" onclick="location.href='<?= base_url('index.php/Welcome/search');?>'" > <span class=" glyphicon glyphicon-search" ></span></button>
+								<form action="<?= site_url(); ?>/Welcome/search"  class="form-inline" method="post">
+									<input class="form-control" type="search" name="search-bar" id="searchinput" placeholder="Cari buku" style="width:400px;">
+									<button type="submit" id="searchbutton" > <span class=" glyphicon glyphicon-search" ></span></button>
 								</form>
 							</li>
 							<li class="nav-item">
