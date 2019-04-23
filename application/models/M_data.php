@@ -5,6 +5,10 @@ class M_data extends CI_Model{
 		return $this->db->get('buku');
 	}
 
+	function get_wishlist(){
+		return $this->db->get('wishlist');
+	}
+	
 	function register_user($data,$table){
 		$this->db->insert($table,$data);
 	}

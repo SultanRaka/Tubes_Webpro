@@ -47,20 +47,20 @@
                     <p>Jenis Kelamin</p>
                         <form>
                           <label class="radio-inline" style="font-family:Karla,sans-serif;">
-                            <input type="radio" name="gender" >Laki-Laki
+                            <input type="radio" name="gender" checked=<?php if($row['gender'] = "Laki-Laki") { echo "true"; }?>  value="Laki=Laki">Laki-Laki
+                          </label>
+
+                          <label class="radio-inline">
+                            <input type="radio" name="gender" checked=<?php if($row['gender'] = "Rahasia") { echo "true"; }?>  value="Laki=Laki"> value="Rahasia">Rahasia
                           </label>
                           <label class="radio-inline">
-                            <input type="radio" name="gender">Perempuan
-                          </label>
-                          <label class="radio-inline">
-                            <input type="radio" name="gender">Rahasia
+                            <input type="radio" name="gender" checked=<?php if($row['gender'] = "Perempuan") { echo "true"; }?>  value="Perempuan">Perempuan
                           </label>
                     </form>
-                    <?php
-                      if (isset($_POST['gender'])){
-                        echo $_POST['gender'];
-                      }
-                        ?>
+                    <script type="text/javascript">
+
+
+                    </script>
                     <br>
                     <!-- Datepicker Tanggal Lahir -->
 
