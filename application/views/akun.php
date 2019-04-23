@@ -34,7 +34,7 @@
                       </div>
                       <a style="margin-top:-100px; font-size:10px;" >Nama Lengkap</a>
                       <div class="no-border" >
-                        <input type="text" name="name" placeholder="" value="<?php echo $_SESSION['nama'] ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
+                        <input type="text" name="nama" placeholder="" value="<?php echo $_SESSION['nama'] ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
                       </div>
                       <a style="margin-top:-100px; font-size:10px;">Email</a>
                       <div class="no-border" >
@@ -57,15 +57,12 @@
                             <input type="radio" name="gender" checked=<?php if($row['gender'] = "Perempuan") { echo "true"; }?>  value="Perempuan">Perempuan
                           </label>
                     </form>
-                    <script type="text/javascript">
 
-
-                    </script>
                     <br>
                     <!-- Datepicker Tanggal Lahir -->
 
                         <p>Tanggal Lahir</p>
-                        <input type="date" name="" value="<?php echo "birthdate"; ?>">
+                        <input type="date" name="">
                         <br>
                         <br>
                   <a style="margin-top:-100px; font-size:12px;">No.Telp</a>

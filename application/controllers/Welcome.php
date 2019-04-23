@@ -313,23 +313,7 @@ class Welcome extends CI_Controller {
 					'status' => "login"
 					);
 			}
-			// $cek = $this->m_data->cek_log("pengguna",$where)->num_rows();
-			// $query = $this->db->query("SELECT * FROM buku join wishlist on(buku.id=wishlist.id) join pengguna on(pengguna.email=) where email = '$email'");
-			// if($cek > 0){
-			// 	foreach ($query->result() as $row){
-			// 		$data_session = array(
-			// 			'nama' => $row->nama,
-			// 			'alamat' => $row->alamat,
-			// 			'email' => $email,
-			// 			'gender'=>$row->gender,
-			// 			'birthdate'=>$row->birthdate,
-			// 			'telp'=>$row->telp,
-			// 			'job'=>$row->job,
-			// 			'hobi'=>$row->hobi,
-			// 			'favbook'=>$row->favbook,
-			// 			'status' => "login"
-			// 			);
-			// 	}
+			
 
 
 
