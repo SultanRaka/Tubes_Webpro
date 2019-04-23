@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	 function __construct(){
 		parent::__construct();
-		$this->load->model('m_data');
+		$this->load->model('M_data');
 	}
 
 	/** untuk load page utama */
@@ -31,6 +31,51 @@ class Welcome extends CI_Controller {
 		$this->load->view('page_sejarah');
 		$this->load->view('footer');
 	}
+
+
+	public function update_pengguna(){
+		$this->load->model('M_data');
+    $table = 'pengguna';
+		$nama=$this->input->post('nama');
+		$email=$this->input->post('email');
+		$birthdate=$this->input->post('birthdate');
+		$gender=$this->input->post('gender');
+		$telp=$this->input->post('telp');
+		$job=$this->input->post('job');
+		// $pass=$this->input->post('pass');
+		// $alamat=$this->input->post('alamat');
+		$hobi=$this->input->post('hobi');
+		$favbook=$this->input->post('favbook');
+		$query = $this->db->query("UPDATE `pengguna` SET `email`='$email',`nama`='$nama',`gender`='$gender',`birthdate`='$birthdate',`telp`='$telp',`job`='$job',`hobi`='$hobi',`favbook`='$favbook' WHERE email = '$email';");
+    // $data_update = array (
+		//
+    //   'email' => $email,
+		// 	'pass' => $pass,
+		// 	'nama' => $nama,
+		// 	'alamat' =>$alamat,
+		// 	'gender' => $gender,
+		// 	  'birthdate' => $birthdate,
+		// 	'telp' => $telp,
+		// 	'job' => $job,
+		// 	'hobi' => $hobi,
+		// 	'favbook'=>$favbook
+    // );
+    // $update = $this->M_data->update_pengguna($table,$data_update);
+		if ($query) {
+			// $this->load->view('imports');
+			// $data['pengguna'] = $this->m_data->get_pengguna()->result();
+			// $this->load->view('imports');
+			// $this->load->view('header');
+			// $this->load->view('akun',$data);
+		  // $this->load->view('footer');	// code...
+
+
+			// code...
+		}else{
+		echo "gagal";
+	}
+}
+
 	public function politik(){
 		$this->load->view('imports');
 
@@ -109,7 +154,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('imports');
 		$data['buku'] = $this->m_data->get_buku()->result();
 		$this->load->view('header');
-		$this->load->view('wishlist');
+		$this->load->view('wishlist',$data);
 		$this->load->view('footer');
 	}
 	function keluar(){
@@ -305,10 +350,11 @@ class Welcome extends CI_Controller {
 			foreach ($query->result() as $row){
 				$data_session = array(
 					'nama' => $row->nama,
+					'pass' => $row->pass,
 					'alamat' => $row->alamat,
 					'email' => $email,
 					'gender'=>$row->gender,
-					'birthdate'=>$row->birtdate,
+					'birthdate'=>$row->birthdate,
 					'telp'=>$row->telp,
 					'job'=>$row->job,
 					'hobi'=>$row->hobi,
@@ -316,6 +362,9 @@ class Welcome extends CI_Controller {
 					'status' => "login"
 					);
 			}
+
+
+
 
 			$this->session->set_userdata($data_session);
 
@@ -336,22 +385,22 @@ class Welcome extends CI_Controller {
 		redirect(base_url());
 	}
 
-	function showbooklist(){
-		$cek = $this->m_data->cek_log("buku",$where)->num_rows();
-		$query = $this->db->query("SELECT * FROM buku where id = '$id'");
-		foreach ($query->result() as $row){
-		$data_session = array(
-			'id'=>$row->id,
-			'judul'=>$row->judul,
-			'author'=>$row->author,
-			'kategori'=>$row->kategori,
-			'deskripsi'=>$row->deskripsi,
-			'harga'=>$row->harga,
-			'format'=>$row->format
-		);
-	}
-
-	}
+	// function showbooklist(){
+	// 	$cek = $this->m_data->cek_log("buku",$where)->num_rows();
+	// 	$query = $this->db->query("SELECT * FROM buku where id = '$id'");
+	// 	foreach ($query->result() as $row){
+	// 	$data_session = array(
+	// 		'id'=>$row->id,
+	// 		'judul'=>$row->judul,
+	// 		'author'=>$row->author,
+	// 		'kategori'=>$row->kategori,
+	// 		'deskripsi'=>$row->deskripsi,
+	// 		'harga'=>$row->harga,
+	// 		'format'=>$row->format
+	// 	);
+	// }
+	//
+	// }
 
 }
 ?>
