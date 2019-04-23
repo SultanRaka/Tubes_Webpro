@@ -43,7 +43,7 @@
           </div>
           <div class="">
           <!-- untuk judul buku dll -->
-          <?php echo $_SESSION['judul'] ?>
+          
 
           </div>
   				</br>

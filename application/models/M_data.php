@@ -16,9 +16,7 @@ class M_data extends CI_Model{
 	function get_pengguna(){
 		return $this->db->get('pengguna');
 	}
-	function get_buku(){
-		return $this->db->get('buku');
-	}
+
 
 	function detil_pengguna($email){
 		return $this->db->query("SELECT * FROM pengguna where email = '$email'");
