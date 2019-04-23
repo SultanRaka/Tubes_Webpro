@@ -51,7 +51,7 @@
                           </label>
 
                           <label class="radio-inline">
-                            <input type="radio" name="gender" checked=<?php if($row['gender'] = "Rahasia") { echo "true"; }?>  value="Laki=Laki"> value="Rahasia">Rahasia
+                            <input type="radio" name="gender" checked=<?php if($row['gender'] = "Rahasia") { echo "true"; }?>  value="Laki=Laki">Rahasia
                           </label>
                           <label class="radio-inline">
                             <input type="radio" name="gender" checked=<?php if($row['gender'] = "Perempuan") { echo "true"; }?>  value="Perempuan">Perempuan
@@ -65,7 +65,7 @@
                     <!-- Datepicker Tanggal Lahir -->
 
                         <p>Tanggal Lahir</p>
-                        <input type="date" name="" value="">
+                        <input type="date" name="" value="<?php echo "birthdate"; ?>">
                         <br>
                         <br>
                   <a style="margin-top:-100px; font-size:12px;">No.Telp</a>
@@ -216,6 +216,7 @@
               <a href="#">Ubah Kata Sandi</a>
 
               </div>
+              <!-- ini untuk tab halaman -->
               <!-- alamat -->
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="padding-top:-100px;">
                       <!-- <button type="button" class="btn btn-pink" style="background: #281e5a;color: #FFFFFF;font-family:Karla, sans-serif; margin-left:600px;">
