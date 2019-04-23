@@ -74,6 +74,14 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	function bookpage(){
+		$this->load->view('imports');
+		$this->load->view('header');
+		$this->load->view('bookpage');
+		$this->load->view('footer');
+	}
+
+
 	function keranjang(){
 		$data['pengguna'] = $this->m_data->get_pengguna()->result();
 		$data2['orderan'] = $this->m_data->get_order()->result();
