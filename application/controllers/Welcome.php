@@ -33,7 +33,8 @@ class Welcome extends CI_Controller {
 	}
 
 
-	public function update_pengguna($email){
+	public function update_pengguna(){
+		$this->load->model('M_data');
     $table = 'pengguna';
 		$nama=$this->input->post('nama');
 		$email=$this->input->post('email');
@@ -41,27 +42,38 @@ class Welcome extends CI_Controller {
 		$gender=$this->input->post('gender');
 		$telp=$this->input->post('telp');
 		$job=$this->input->post('job');
+		// $pass=$this->input->post('pass');
+		// $alamat=$this->input->post('alamat');
 		$hobi=$this->input->post('hobi');
 		$favbook=$this->input->post('favbook');
-    $data_update = array (
+		$query = $this->db->query("UPDATE `pengguna` SET `email`='$email',`nama`='$nama',`gender`='$gender',`birthdate`='$birthdate',`telp`='$telp',`job`='$job',`hobi`='$hobi',`favbook`='$favbook' WHERE email = '$email';");
+    // $data_update = array (
+		//
+    //   'email' => $email,
+		// 	'pass' => $pass,
+		// 	'nama' => $nama,
+		// 	'alamat' =>$alamat,
+		// 	'gender' => $gender,
+		// 	  'birthdate' => $birthdate,
+		// 	'telp' => $telp,
+		// 	'job' => $job,
+		// 	'hobi' => $hobi,
+		// 	'favbook'=>$favbook
+    // );
+    // $update = $this->M_data->update_pengguna($table,$data_update);
+		if ($query) {
+			// $this->load->view('imports');
+			// $data['pengguna'] = $this->m_data->get_pengguna()->result();
+			// $this->load->view('imports');
+			// $this->load->view('header');
+			// $this->load->view('akun',$data);
+		  // $this->load->view('footer');	// code...
 
-      'email' => $email,
-			'pass' => "123456",
-			'nama' => $nama,
-			'alamat' =>"aga",
-			'gender' => $gender,
-			  'birthdate' => $birthdate,
-			'telp' => $telp,
-			'job' => $job,
-			'hobi' => $hobi,
-			'favbook'=>$favbook
-    );
-    $update = $this->M_data->update_pengguna($table,$email,$data_update);
-		if ($update) {
-			echo "true";
+
 			// code...
-		}
+		}else{
 		echo "gagal";
+	}
 }
 
 	public function politik(){

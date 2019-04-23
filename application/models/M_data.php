@@ -43,10 +43,12 @@ class M_data extends CI_Model{
 		return $this->db->empty_table('orderan');
 	}
 
-	public function update_pengguna($table,$email,$data_update){
+	public function update_pengguna($table,$data_update){
 
-		$this->db->where('email', $email);
+		$this->db->where('email', $this->session->userdata('email'));
+
  	 $update = $this->db->update($table,$data_update);
+
 
 	}
 

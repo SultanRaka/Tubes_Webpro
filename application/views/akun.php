@@ -28,7 +28,7 @@
                   </nav>
 
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                          <form class="" action="<?php echo site_url('Welcome/update_pengguna/'.$_SESSION['email']);?>" method="post">
+                          <form class="" action="<?php echo site_url('Welcome/update_pengguna')?>" method="post">
                               <div class="rounded-lg" style="background:#e8eaf6; margin-top:20; weight:50px;  padding: 15px;heigh:50px; color:#281e5a; font-family:Karla,sans-serif; font-size:18px; contrast:12.21;">
                                 <a > Berlangganan Newsletter </a>
                               </div>
@@ -60,18 +60,18 @@
                     <!-- Datepicker Tanggal Lahir -->
 
                                 <p>Tanggal Lahir</p>
-                                <input type="date" name="" value="<?php echo $_SESSION['birthdate'] ?>">
+                                <input type="date" name="birthdate" value="<?php echo $_SESSION['birthdate'] ?>">
                                   <br>
                                   <br>
                                   <a style="margin-top:-100px; font-size:12px;">No.Telp</a>
                                   <div class="no-border" >
-                                    <input type="text" name="" placeholder="" value="<?php echo $_SESSION['telp']; ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
+                                    <input type="text" name="telp" placeholder="" value="<?php echo $_SESSION['telp']; ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
                                   </div>
                                   <br>
                   <!--  select pekerjaan-->
                                 <a style="margin-top:-100px; font-size:10px;"> Profesi atau Pekerjaan</a>
 
-                                <select name="formjob" class="form-control" id="sel1" value="<?php echo $options['job'] ?>">
+                                <select name="job" class="form-control" id="sel1" value="<?php echo $options['job'] ?>">
 
                                     <option value="<?php echo $_SESSION['job']?>" selected="selected"><?php echo $_SESSION['job'];?></option>
                                     <option value="Pegawai Swasta">Pegawai Swasta</option>
@@ -86,7 +86,7 @@
                 <!-- Default inline 1-->
                 <br>
                             <p style="margin-top:50px; padding:2%;">Hobi</p>
-                            <select name="formhobi" class="form-control" id="sel1" value="<?php echo $options['hobi']; ?>">
+                            <select name="hobi" class="form-control" id="sel1" value="<?php echo $options['hobi']; ?>">
 
                                 <option value="<?php echo $_SESSION['hobi']?>" selected="selected"><?php echo $_SESSION['hobi'];?></option>
                                 <option value="Kecantikan">Kecantikan</option>
@@ -99,7 +99,7 @@
                                   <br>
               <!--chckbox kategory buku favorite  -->
                                     <p>Kategori Buku Favorite</p>
-                                    <select name="formbookfav" class="form-control" id="sel2" value="<?php echo $options['favbook']; ?>">
+                                    <select name="favbook" class="form-control" id="sel2" value="<?php echo $options['favbook']; ?>">
 
                                         <option value="<?php echo $_SESSION['favbook']?>" selected="selected"><?php echo $_SESSION['favbook'];?></option>
                                         <option value="Pegawai Swasta">Buku Anak</option>
@@ -120,32 +120,32 @@
               </div>
 
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="margin-top:-100px;">
-aaaa
-                       <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background: #281e5a;color: #FFFFFF;font-family:Karla, sans-serif; margin-top:-1400px;margin-left:500px;">
-                       Tambah Alamat
-                     </button>
+aaa
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background: #281e5a;color:  #FFFFFF;font-family:Karla, sans-serif; margin-top:-1400px;margin-left:500px;">
+                                Tambah Alamat
+                              </button>
 
                            <!-- Modal -->
-                             <div class="modal fade" id="myModal" role="dialog">
-                               <div class="modal-dialog">
+                                  <div class="modal fade" id="myModal" role="dialog">
+                                      <div class="modal-dialog">
                                  <!-- Modal content-->
-                                 <div class="modal-content">
-                                   <div class="modal-header">
-                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                     <h4 class="modal-title" style="">Tambah Alamat Pengiriman</h4>
-                                   </div>
-                                   <div class="modal-body">
-                                     <form class="" action="index.html" method="post">
-                                       <p>Nama Alamat</p>
-                                       <input type="text" name="alamat" placeholder="Masukkan Nama Alamat">
-                                       <br>
-                                       <p>Nama Penerima</p>
-                                       <input type="text" name="name"placeholder="Masukkan Nama Penerima">
-                                       <br>
-                                       <p>No handphone</p>
-                                       <input type="number" name="hp" value="+62" placeholder="Masukan No handphone">
-                                       <br>
-                                       <label for="sel1">Provinsi</label>
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                          <h4 class="modal-title" style="">Tambah Alamat Pengiriman</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                          <form class="" action="index.html" method="post">
+                                            <p>Nama Alamat</p>
+                                            <input type="text" name="alamat" placeholder="Masukkan Nama Alamat">
+                                            <br>
+                                            <p>Nama Penerima</p>
+                                            <input type="text" name="name"placeholder="Masukkan Nama Penerima">
+                                            <br>
+                                            <p>No handphone</p>
+                                            <input type="number" name="hp" value="+62" placeholder="Masukan No handphone">
+                                            <br>
+                                            <label for="sel1">Provinsi</label>
                                             <select class="form-control" id="sel1">
                                               <option>Pilih Provinsi</option>
                                               <option>Bali</option>
@@ -161,7 +161,7 @@ aaaa
                                               <option>Aceh</option>
                                               <option>Sulawesi Selatan</option>
                                             </select>
-                                      <label for="sel1">Kota/Kabupaten</label>
+                                            <label for="sel1">Kota/Kabupaten</label>
                                               <select class="form-control" id="sel1">
                                               <option>Pilih Kota/Kabupaten</option>
                                               <option>Bandung</option>
@@ -174,7 +174,7 @@ aaaa
                                               <option>Palembang</option>
                                               <option>Denpasar</option>
                                               </select>
-                                      <label for="sel1">Kode Pos</label>
+                                            <label for="sel1">Kode Pos</label>
                                               <select class="form-control" id="sel1">
                                               <option>Pilih Kode Pos</option>
                                               <option>80811</option>
@@ -185,15 +185,15 @@ aaaa
                                               <option>80890</option>
                                               </select>
 
-                                      <br>
-                                      <p>Alamat Lengkap</p>
-                                      <input type="text" name="alm1" value="" placeholder="Masukkan Alamat Lengkap">
-                                     </form>
-                                   </div>
-                                   <div class="modal-footer">
-                                     <button type="button" class="btn btn-default" data-dismiss="modal">Simpan Alamat</button>
-                                   </div>
-                                 </div>
+                                              <br>
+                                              <p>Alamat Lengkap</p>
+                                              <input type="text" name="alm1" value="" placeholder="Masukkan Alamat Lengkap">
+                                              </form>
+                                              </div>
+                                              <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Simpan Alamat</button>
+                                              </div>
+                                              </div>
 
                                </div>
                              </div>
