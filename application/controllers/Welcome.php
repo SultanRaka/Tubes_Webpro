@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	 function __construct(){
 		parent::__construct();
-		$this->load->model('m_data');
+		$this->load->model('M_data');
 	}
 
 	/** untuk load page utama */
@@ -31,6 +31,51 @@ class Welcome extends CI_Controller {
 		$this->load->view('page_sejarah');
 		$this->load->view('footer');
 	}
+
+
+	public function update_pengguna(){
+		$this->load->model('M_data');
+    $table = 'pengguna';
+		$nama=$this->input->post('nama');
+		$email=$this->input->post('email');
+		$birthdate=$this->input->post('birthdate');
+		$gender=$this->input->post('gender');
+		$telp=$this->input->post('telp');
+		$job=$this->input->post('job');
+		// $pass=$this->input->post('pass');
+		// $alamat=$this->input->post('alamat');
+		$hobi=$this->input->post('hobi');
+		$favbook=$this->input->post('favbook');
+		$query = $this->db->query("UPDATE `pengguna` SET `email`='$email',`nama`='$nama',`gender`='$gender',`birthdate`='$birthdate',`telp`='$telp',`job`='$job',`hobi`='$hobi',`favbook`='$favbook' WHERE email = '$email';");
+    // $data_update = array (
+		//
+    //   'email' => $email,
+		// 	'pass' => $pass,
+		// 	'nama' => $nama,
+		// 	'alamat' =>$alamat,
+		// 	'gender' => $gender,
+		// 	  'birthdate' => $birthdate,
+		// 	'telp' => $telp,
+		// 	'job' => $job,
+		// 	'hobi' => $hobi,
+		// 	'favbook'=>$favbook
+    // );
+    // $update = $this->M_data->update_pengguna($table,$data_update);
+		if ($query) {
+			// $this->load->view('imports');
+			// $data['pengguna'] = $this->m_data->get_pengguna()->result();
+			// $this->load->view('imports');
+			// $this->load->view('header');
+			// $this->load->view('akun',$data);
+		  // $this->load->view('footer');	// code...
+
+
+			// code...
+		}else{
+		echo "gagal";
+	}
+}
+
 	public function politik(){
 		$this->load->view('imports');
 
@@ -63,7 +108,7 @@ class Welcome extends CI_Controller {
 
 
 	function register(){
-				$this->load->view('imports');
+		$this->load->view('imports');
 		$this->load->view('page_register');
 	}
 
@@ -74,20 +119,19 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	function bookpage(){
+	function bookpage($id){
+		$data['book'] = $this->m_data->get_by_id($id,'id_buku','buku');
 		$this->load->view('imports');
 		$this->load->view('header');
-		$this->load->view('bookpage');
+		$this->load->view('bookpage',$data);
 		$this->load->view('footer');
 	}
 
 
 	function keranjang(){
-		$data['pengguna'] = $this->m_data->get_pengguna()->result();
-		$data2['orderan'] = $this->m_data->get_order()->result();
 		$this->load->view('imports');
 		$this->load->view('header');
-		$this->load->view('page_keranjang',$data, $data2);
+		$this->load->view('page_keranjang');
 		$this->load->view('footer');
 	}
 
@@ -110,7 +154,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('imports');
 		$data['buku'] = $this->m_data->get_buku()->result();
 		$this->load->view('header');
-		$this->load->view('wishlist');
+		$this->load->view('wishlist',$data);
 		$this->load->view('footer');
 	}
 	function keluar(){
@@ -121,11 +165,15 @@ class Welcome extends CI_Controller {
 	}
 
 	function search(){
+		$query = $this->input->post('search-bar');
+		$data['buku'] = $this->m_data->get_by_id($query,'nama','buku');
 		$this->load->view('imports');
 		$this->load->view('header');
-		$this->load->view('search');
+		$this->load->view('search',$data);
 		$this->load->view('footer');
 	}
+
+
 
 	function promo(){
 		$this->load->view('imports');
@@ -248,23 +296,23 @@ class Welcome extends CI_Controller {
 
 
 	/** untuk fungsi */
-	function tambah_aksi(){
-		$judul = $this->input->post('judul');
-		$harga = $this->input->post('harga');
+	// function tambah_aksi(){
+	// 	$judul = $this->input->post('judul');
+	// 	$harga = $this->input->post('harga');
+	//
+	// 	$data = array(
+	// 		'judul' => $judul,
+	// 		'harga' => $harga
+	// 		);
+	// 	$this->m_data->input_data($data,'orderan');
+	// 	redirect(base_url('index.php/Welcome/keranjang'));
+	// }
 
-		$data = array(
-			'judul' => $judul,
-			'harga' => $harga
-			);
-		$this->m_data->input_data($data,'orderan');
-		redirect(base_url('index.php/Welcome/keranjang'));
-	}
-
-	function hapus($id){
-		$where = array('id' => $id);
-		$this->m_data->hapus_data($where,'orderan');
-		redirect(base_url('index.php/Welcome/keranjang'));
-	}
+	// function hapus($id){
+	// 	$where = array('id' => $id);
+	// 	$this->m_data->hapus_data($where,'orderan');
+	// 	redirect(base_url('index.php/Welcome/keranjang'));
+	// }
 
 	function wipe(){
 		$this->m_data->wipe_order();
@@ -302,10 +350,11 @@ class Welcome extends CI_Controller {
 			foreach ($query->result() as $row){
 				$data_session = array(
 					'nama' => $row->nama,
+					'pass' => $row->pass,
 					'alamat' => $row->alamat,
 					'email' => $email,
 					'gender'=>$row->gender,
-					'birthdate'=>$row->birtdate,
+					'birthdate'=>$row->birthdate,
 					'telp'=>$row->telp,
 					'job'=>$row->job,
 					'hobi'=>$row->hobi,
@@ -313,6 +362,9 @@ class Welcome extends CI_Controller {
 					'status' => "login"
 					);
 			}
+
+
+
 
 			$this->session->set_userdata($data_session);
 
@@ -333,22 +385,22 @@ class Welcome extends CI_Controller {
 		redirect(base_url());
 	}
 
-	function showbooklist(){
-		$cek = $this->m_data->cek_log("buku",$where)->num_rows();
-		$query = $this->db->query("SELECT * FROM buku where id = '$id'");
-		foreach ($query->result() as $row){
-		$data_session = array(
-			'id'=>$row->id,
-			'judul'=>$row->judul,
-			'author'=>$row->author,
-			'kategori'=>$row->kategori,
-			'deskripsi'=>$row->deskripsi,
-			'harga'=>$row->harga,
-			'format'=>$row->format
-		);
-	}
-
-	}
+	// function showbooklist(){
+	// 	$cek = $this->m_data->cek_log("buku",$where)->num_rows();
+	// 	$query = $this->db->query("SELECT * FROM buku where id = '$id'");
+	// 	foreach ($query->result() as $row){
+	// 	$data_session = array(
+	// 		'id'=>$row->id,
+	// 		'judul'=>$row->judul,
+	// 		'author'=>$row->author,
+	// 		'kategori'=>$row->kategori,
+	// 		'deskripsi'=>$row->deskripsi,
+	// 		'harga'=>$row->harga,
+	// 		'format'=>$row->format
+	// 	);
+	// }
+	//
+	// }
 
 }
 ?>

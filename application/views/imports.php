@@ -136,7 +136,7 @@
   		background: url(https://www.gramedia.com/flash-sale-banner-ii.png);
   		background-size: cover;
   		padding-top: 20px;
-  		padding-bottom: 450px;
+  		padding-bottom: 380px;
   	}
   	.flickity-page-dots {
   		display: none;

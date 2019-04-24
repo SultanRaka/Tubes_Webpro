@@ -1,36 +1,25 @@
 <div class="inner-container" style="padding-top:10%;">
   <div class="container-fluid" style="display:flex;">
     <div style="margin:auto; display:flex;">
-      <div class="">
-        <div class="card" style="width:230px;">
-          <img class="" src="..." alt="Card image cap" style="width:230px; height:130px;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+      <?php
+        $promo_item = $this->m_data->get_data('promo');
+        foreach($promo_item as $item){?>
+          <div class="" style="padding:0 10px 0;">
+            <div class="card" style="width:318px; ">
+              <img class="" src="<?= $item->link_image; ?>"  style=" width:318px; height:130px; object-fit:cover;">
+              <div class="card-body">
+            <h4><?= $item->title; ?></h4>
+            <div style="padding-top:40px;">
+              <p>Periode</p>
+              <p><?= $item->periode; ?></p>
+            </div>
+            <div align="center">
+              <a href="#" class="btn btn-primary" style=" font-size: 17px; padding:10px 100px 10px;">Lihat Promo</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="" style="padding:0 3% 0;">
-        <div class="card" style="width:230px;">
-          <img class="" src="..." alt="Card image cap" style="width:230px; height:130px;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="">
-        <div class="card" style="width:230px;">
-          <img class="" src="..." alt="Card image cap" style="width:230px; height:130px;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
+    <?php } ?>
     </div>
   </div>
 </div>
