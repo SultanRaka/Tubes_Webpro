@@ -17,10 +17,10 @@ class M_data extends CI_Model{
 	function get_pengguna(){
 		return $this->db->get('pengguna');
 	}
-	// 
-	// function detil_pengguna($email){
-	// 	return $this->db->query("SELECT * FROM pengguna where 'email' = '$email'");
-	// }
+
+	function detil_pengguna($email){
+		return $this->db->query("SELECT * FROM pengguna where email = '$email'");
+	}
 
 	function get_order(){
 		return $this->db->get('orderan');
