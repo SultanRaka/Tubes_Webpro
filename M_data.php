@@ -1,7 +1,11 @@
 <?php
 
 class M_data extends CI_Model{
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> a2706a53d8ecff072a4388db5bd5e4b4dfa052e5
 	function get_buku(){
 		return $this->db->get('buku');
 	}
