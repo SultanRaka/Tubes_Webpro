@@ -7,29 +7,6 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 		$this->load->model('M_data');
 	}
-
-
-	public function update_pengguna(){
-		$data = array(
-			'email' => $this->input->post('email'),
-			'nama' => $this->input->post('nama'),
-			'gender' => $this->input->post('gender'),
-			'birthdate' => $this->input->post('birthdate'),
-			'telp' => $this->input->post('telp'),
-			'job' => $this->input->post('job'),
-			'hobi' => $this->input->post('hobi'),
-			'favbook' =>$this->input->post('favbook')
-		);
-
-		$this->where('email',$data['email']);
-		$query = $this->db->update('pengguna',$data);
-		if ($query) {
-			redirect(base_url());
-		}else{
-			echo "gagal";
-		}
-}
-
 	public function loadpage($name){
 		$this->load->view('imports');
 		$this->load->view('header');
@@ -42,10 +19,7 @@ class Welcome extends CI_Controller {
 		$this->load->view($name,$data);
 		$this->load->view('footer');
 	}
-
-
-	public function index()
-	{
+	public function index(){
 			$this->loadpage('home');
 	}
 
@@ -56,7 +30,8 @@ class Welcome extends CI_Controller {
 	}
 
 	function bookpage($id){
-		$data['book'] = $this->m_data->get_by_id($id,'id_buku','buku');
+		$where = array('id_buku'=> $id);
+		$data['book'] = $this->m_data->get_by('buku',$where);
 		$this->loadpagecarry('bookpage',$data);
 	}
 
@@ -65,7 +40,8 @@ class Welcome extends CI_Controller {
 	}
 
 	function akun(){
-		$data['pengguna'] = $this->m_data->get_pengguna()->result();
+		$where = array('email'=>$this->session->email);
+		$data['user'] = $this->m_data->get_by('pengguna',$where)->row_array();
 		$this->loadpagecarry('akun',$data);
 	}
 
@@ -74,14 +50,14 @@ class Welcome extends CI_Controller {
 	}
 
 	function wishlist(){
-		$data['buku'] = $this->m_data->get_buku()->result();
+		$data['buku'] = $this->m_data->get('buku')->result();
 		$this->loadpagecarry('wishlist',$data);
 	}
 
 
 	function search(){
 		$query = $this->input->post('search-bar');
-		$data['buku'] = $this->m_data->get_by_id($query,'nama','buku');
+		$data['buku'] = $this->m_data->search_by_id($query,'nama','buku');
 		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view('search',$data);
@@ -89,7 +65,8 @@ class Welcome extends CI_Controller {
 	}
 
 	function promo(){
-		$this->loadpage('promo');
+		 $data['promo_item'] = $this->m_data->get('promo');
+		$this->loadpagecarry('promo',$data);
 	}
 
 	function flash(){
@@ -101,10 +78,9 @@ class Welcome extends CI_Controller {
 		$data = array(
 			'email' => $this->input->post('email'),
 			'pass' => $this->input->post('password'),
-			'nama' => $this->input->post('name'),
-			'alamat' => $this->input->post('alamat')
+			'nama' => $this->input->post('name')
 			);
-		$this->m_data->register_user($data,'pengguna');
+		$this->m_data->register_user('pengguna',$data);
 		redirect(base_url());
 	}
 
@@ -114,10 +90,11 @@ class Welcome extends CI_Controller {
 			'email' => $this->input->post('email'),
 			'pass' => $this->input->post('password')
 		);
-		$query = $this->m_data->get_by('pengguna',$where);
+		$query = $this->m_data->get_by('pengguna',$where)->row_array();
 
 		if($query > 0){
 			$data_session = array(
+				'nama' => $query['nama'],
 				'email' => $where['email'],
 				'status' => 'login'
 			);
@@ -138,19 +115,21 @@ class Welcome extends CI_Controller {
 	}
 
 
+		public function update_pengguna(){
+			$data = array(
+				'email' => $this->input->post('email'),
+				'nama' => $this->input->post('nama'),
+				'gender' => $this->input->post('gender'),
+				'birthdate' => $this->input->post('birthdate'),
+				'telp' => $this->input->post('telp'),
+				'job' => $this->input->post('job'),
+				'hobi' => $this->input->post('hobi'),
+				'favbook' =>$this->input->post('favbook')
+			);
+
+			$this->db->where('email',$data['email']);
+			$this->db->update('pengguna',$data);
+				redirect(base_url());
+	}
 }
 ?>
-<!--
-$data_session = array(
-	'nama' => $row->nama,
-	'pass' => $row->pass,
-	'alamat' => $row->alamat,
-	'email' => $email,
-	'gender'=>$row->gender,
-	'birthdate'=>$row->birthdate,
-	'telp'=>$row->telp,
-	'job'=>$row->job,
-	'hobi'=>$row->hobi,
-	'favbook'=>$row->favbook,
-	'status' => "login"
-	); -->

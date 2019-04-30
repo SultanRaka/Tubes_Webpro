@@ -2,8 +2,8 @@
   <div class="container-fluid" style="display:flex;">
     <div style="margin:auto; display:flex;">
       <?php
-        $promo_item = $this->m_data->get_data('promo');
-        foreach($promo_item as $item){?>
+
+        foreach($promo_item->result() as $item){?>
           <div class="" style="padding:0 10px 0;">
             <div class="card" style="width:318px; ">
               <img class="" src="<?= $item->link_image; ?>"  style=" width:318px; height:130px; object-fit:cover;">

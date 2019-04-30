@@ -34,11 +34,11 @@
                               </div>
                                 <a style="margin-top:-100px; font-size:10px;" >Nama Lengkap</a>
                                 <div class="no-border" >
-                                    <input type="text" name="nama" placeholder="" value="<?php echo $_SESSION['nama']; ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
+                                    <input type="text" name="nama" placeholder="" value="<?php echo $user['nama']; ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
                                 </div>
                                     <a style="margin-top:-100px; font-size:10px;">Email</a>
                                 <div class="no-border" >
-                                    <input type="text" name="email" placeholder="" value="<?php echo $_SESSION['email']; ?>"style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
+                                    <input type="text" name="email" placeholder="" value="<?php echo $user['email']; ?>"style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
                                 </div>
                                 <div class=verification"">
                                     <a href="#">Verifikasi Email Saya</a>
@@ -47,25 +47,25 @@
                                   <p>Jenis Kelamin</p>
 
                                       <label class="radio-inline" style="font-family:Karla,sans-serif;">
-                                          <input type="radio" name="gender" checked=<?php if($row['gender'] = "Laki-Laki") { echo "true"; }?>  value="Laki=Laki">Laki-Laki
+                                          <input type="radio" name="gender" checked=<?php if($user['gender'] = "Laki-Laki") { echo "true"; }?>  value="Laki=Laki">Laki-Laki
                                         </label>
 
                                         <label class="radio-inline">
-                                          <input type="radio" name="gender" checked=<?php if($row['gender'] = "Rahasia") { echo "true"; }?>  value="Laki=Laki">Rahasia
+                                          <input type="radio" name="gender" checked=<?php if($user['gender'] = "Rahasia") { echo "true"; }?>  value="Laki=Laki">Rahasia
                                         </label>
                                         <label class="radio-inline">
-                                          <input type="radio" name="gender" checked=<?php if($row['gender'] = "Perempuan") { echo "true"; }?>  value="Perempuan">Perempuan
+                                          <input type="radio" name="gender" checked=<?php if($user['gender'] = "Perempuan") { echo "true"; }?>  value="Perempuan">Perempuan
                                         </label>
                                         <br>
                     <!-- Datepicker Tanggal Lahir -->
 
                                 <p>Tanggal Lahir</p>
-                                <input type="date" name="birthdate" value="<?php echo $_SESSION['birthdate'] ?>">
+                                <input type="date" name="birthdate" value="<?php echo $user['birthdate'] ?>">
                                   <br>
                                   <br>
                                   <a style="margin-top:-100px; font-size:12px;">No.Telp</a>
                                   <div class="no-border" >
-                                    <input type="text" name="telp" placeholder="" value="<?php echo $_SESSION['telp']; ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
+                                    <input type="text" name="telp" placeholder="" value="<?php echo $user['telp']; ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
                                   </div>
                                   <br>
                   <!--  select pekerjaan-->
@@ -73,7 +73,7 @@
 
                                 <select name="job" class="form-control" id="sel1" value="<?php echo $options['job'] ?>">
 
-                                    <option value="<?php echo $_SESSION['job']?>" selected="selected"><?php echo $_SESSION['job'];?></option>
+                                    <option value="<?php echo $user['job'];?>" selected="selected"><?php echo $user['job'];?></option>
                                     <option value="Pegawai Swasta">Pegawai Swasta</option>
                                     <option value="Pegawai Negeri">Pegawai Negeri</option>
                                     <option value="Dokter">Dokter</option>
@@ -88,7 +88,7 @@
                             <p style="margin-top:50px; padding:2%;">Hobi</p>
                             <select name="hobi" class="form-control" id="sel1" value="<?php echo $options['hobi']; ?>">
 
-                                <option value="<?php echo $_SESSION['hobi']?>" selected="selected"><?php echo $_SESSION['hobi'];?></option>
+                                <option value="<?php echo $user['hobi'];?>" selected="selected"><?php echo $user['hobi'];?></option>
                                 <option value="Kecantikan">Kecantikan</option>
                                 <option value="Otomotif">Memancing</option>
                                 <option value="Membaca">Berkebun</option>
@@ -101,7 +101,7 @@
                                     <p>Kategori Buku Favorite</p>
                                     <select name="favbook" class="form-control" id="sel2" value="<?php echo $options['favbook']; ?>">
 
-                                        <option value="<?php echo $_SESSION['favbook']?>" selected="selected"><?php echo $_SESSION['favbook'];?></option>
+                                        <option value="<?php echo $user['favbook'];?>" selected="selected"><?php echo $user['favbook']?></option>
                                         <option value="Pegawai Swasta">Buku Anak</option>
                                         <option value="Pegawai Negeri">Agama</option>
                                         <option value="Dokter">Fiksi</option>
@@ -198,7 +198,7 @@ aaa
                                </div>
                              </div>
                              <div class="rounded-lg" style="background:#e8eaf6; margin-top:20; weight:50px; color:#281e5a; font-family:Karla,sans-serif; font-size:18px;">
-                              <p value="<?php echo $_SESSION['alamat']; ?>"></p>
+                              <p value="<?php echo $user['alamat']; ?>"></p>
                              </div>
                   </div>
                   <!-- </div> -->

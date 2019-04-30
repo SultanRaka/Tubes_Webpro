@@ -90,7 +90,7 @@
 						 <div class="modal-content" style="max-width:300px;">
 							 <div class="card" >
 								 <article class="card-body">
-									 <h2>Halo, <b style="color:lightblue;"> <?= $_SESSION['nama']; ?> </b> </h2>
+									 <h2>Halo, <b style="color:lightblue;"> <?= $this->session->nama; ?> </b> </h2>
 									 <h3><a href="<?php echo base_url();?>index.php/Welcome/akun"> Pesanan Saya </a></h3>
 									 <h3><a href="<?php echo base_url();?>index.php/Welcome/akun"> Akun Saya</a></h3>
 									 <h3><a href="<?php echo base_url();?>index.php/Welcome/akun"> Wishlist Saya</a></h3>
