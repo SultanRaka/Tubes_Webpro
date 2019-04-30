@@ -20,7 +20,8 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 	public function index(){
-			$this->loadpage('home');
+			$data['sale_item'] = $this->m_data->get_join('flash_sale','buku','buku.id_buku = flash_sale.id_buku')->result();
+			$this->loadpagecarry('home',$data);
 	}
 
 

@@ -86,7 +86,6 @@
             <div class="col-md-10 main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "freeScroll": true }'>
 
           <?php
-            $sale_item = $this->m_data->get_join('flash_sale','buku','buku.id_buku = flash_sale.id_buku');
             foreach($sale_item as $item){?>
               <div class="carousel-cell">
                 <div class="card">
