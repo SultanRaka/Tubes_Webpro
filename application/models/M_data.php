@@ -4,6 +4,10 @@ class M_data extends CI_Model{
 	function get_data($table){
 			return $this->db->get($table)->result();
 	}
+	function get_by($table,$item){
+			return $this->db->get_where($table,$item);
+	}
+
 	function get_buku(){
 		return $this->db->get('buku');
 	}
@@ -16,9 +20,6 @@ class M_data extends CI_Model{
 		$this->db->insert($table,$data);
 	}
 
-	function cek_log($table,$where){
-		return $this->db->get_where($table,$where);
-	}
 
 	function get_pengguna(){
 		return $this->db->get('pengguna');
@@ -62,6 +63,7 @@ class M_data extends CI_Model{
 		$this->db->from($tabname);
 		$this->db->like($filter, $query);
 		return $this->db->get()->row_array();
+	}
 	public function update_pengguna($table,$data_update){
 
 		$this->db->where('email', $this->session->userdata('email'));
