@@ -7,32 +7,34 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 		$this->load->model('M_data');
 	}
-	public function loadpage($name){
+	function loadpage($name){
 		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view($name);
 		$this->load->view('footer');
 	}
-	public function loadpagecarry($name,$data){
+	function loadpagecarry($name,$data){
 		$this->load->view('imports');
 		$this->load->view('header');
 		$this->load->view($name,$data);
 		$this->load->view('footer');
 	}
-	public function index(){
+	function secload($name){
+		$this->load->view('imports');
+		$this->load->view($name);
+	}
+// Non-Carry Pages
+	function register(){
+		$this->secload('page_register');
+	}
+// Carry Pages
+	function index(){
 			$data['sale_item'] = $this->m_data->get_join('flash_sale','buku','buku.id_buku = flash_sale.id_buku')->result();
 			$this->loadpagecarry('home',$data);
 	}
-
-
-	function register(){
-		$this->load->view('imports');
-		$this->load->view('page_register');
-	}
-
 	function bookpage($id){
 		$where = array('id_buku'=> $id);
-		$data['book'] = $this->m_data->get_by('buku',$where);
+		$data['book'] = $this->m_data->get_by('buku',$where)->row_array();
 		$this->loadpagecarry('bookpage',$data);
 	}
 
@@ -116,7 +118,7 @@ class Welcome extends CI_Controller {
 	}
 
 
-		public function update_pengguna(){
+	function update_pengguna(){
 			$data = array(
 				'email' => $this->input->post('email'),
 				'nama' => $this->input->post('nama'),

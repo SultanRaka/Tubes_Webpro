@@ -10,19 +10,18 @@ class M_data extends CI_Model{
 	function insert($table,$item){
 		$this->db->insert($table,$item);
 	}
-
 	function get_join($from,$join,$where){
-		$this->db->select('*');
-		$this->db->from($from);
-		$this->db->join($join, $where);
-		return $this->db->get();
+		return $this->db->select('*')
+		->from($from)
+		->join($join, $where)
+		->get();
 	}
 
 	function search_by_id($query,$filter,$tabname){
-		$this->db->select('*');
-		$this->db->from($tabname);
-		$this->db->like($filter, $query);
-		return $this->db->get()->result();
+		return $this->db->select('*')
+		->from($tabname)
+		->like($filter, $query)
+		->get()->result();
 	}
 	public function update_pengguna($table,$data_update){
 		$this->db->where('email', $this->session->userdata('email'));
