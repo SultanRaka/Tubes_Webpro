@@ -24,7 +24,6 @@ class M_data extends CI_Model{
 		return $this->db->get('pengguna');
 	}
 
-
 	function detil_pengguna($email){
 		return $this->db->query("SELECT * FROM pengguna where email = '$email'");
 	}
@@ -63,6 +62,34 @@ class M_data extends CI_Model{
 		$this->db->from($tabname);
 		$this->db->like($filter, $query);
 		return $this->db->get()->row_array();
+	public function update_pengguna($table,$data_update){
+
+		$this->db->where('email', $this->session->userdata('email'));
+
+ 	 $update = $this->db->update($table,$data_update);
+
+
+	}
+
+
+	function get_join($from,$join,$where){
+		$this->db->select('*');
+		$this->db->from($from);
+		$this->db->join($join, $where);
+		return $this->db->get()->result();
+	}
+
+	function get_by_id($id,$col,$tabname){
+		$this->db->where($col,$id);
+		$data = $this->db->get($tabname);
+		return $data->row_array();
+	}
+	function search_by_id($query,$filter,$tabname){
+		$this->db->select('*');
+		$this->db->from($tabname);
+		$this->db->like($filter, $query);
+		return $this->db->get()->row_array();
+	}
 	public function update_pengguna($table,$data_update){
 
 		$this->db->where('email', $this->session->userdata('email'));
