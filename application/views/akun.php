@@ -27,7 +27,7 @@
                       </div>
                   </nav>
 
-                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="tab-pane fade show in active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                           <form class="" action="<?php echo site_url('Welcome/update_pengguna')?>" method="post">
                               <div class="rounded-lg" style="background:#e8eaf6; margin-top:20; weight:50px;  padding: 15px;heigh:50px; color:#281e5a; font-family:Karla,sans-serif; font-size:18px; contrast:12.21;">
                                 <a > Berlangganan Newsletter </a>
@@ -119,7 +119,7 @@
               </form>
               </div>
 
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="margin-top:-100px;">
+                    <div class="tab-pane fade " id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="margin-top:-100px;">
 aaa
                               <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background: #281e5a;color:  #FFFFFF;font-family:Karla, sans-serif; margin-top:-1400px;margin-left:500px;">
                                 Tambah Alamat

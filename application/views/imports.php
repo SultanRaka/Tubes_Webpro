@@ -177,7 +177,7 @@
       margin-bottom: 10px;
     }
 
-    .sidenav {
+    .sidenav  {
       padding-top:10%;
       top:100px;
       width: 310px;

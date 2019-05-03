@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
-	 function __construct(){
+  function __construct(){
 		parent::__construct();
 		$this->load->model('M_data');
 	}
@@ -23,6 +23,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('imports');
 		$this->load->view($name);
 	}
+
 // Non-Carry Pages
 	function register(){
 		$this->secload('page_register');
@@ -37,27 +38,25 @@ class Welcome extends CI_Controller {
 		$data['book'] = $this->m_data->get_by('buku',$where)->row_array();
 		$this->loadpagecarry('bookpage',$data);
 	}
-
 	function keranjang(){
-			$this->loadpage('keranjang');
+			$where ='buku.id_buku = keranjang.id_buku';
+      $email = $this->session->userdata('email');
+			$data['cart_item'] = $this->m_data->get_join_cart('keranjang','buku',$where,$email)->result();
+      $data['count_result'] = count($data['cart_item']);
+			$this->loadpagecarry('page_keranjang',$data);
 	}
-
 	function akun(){
 		$where = array('email'=>$this->session->email);
 		$data['user'] = $this->m_data->get_by('pengguna',$where)->row_array();
 		$this->loadpagecarry('akun',$data);
 	}
-
 	function checkout(){
 		$this->loadpage('page_checkout');
 	}
-
 	function wishlist(){
 		$data['buku'] = $this->m_data->get('buku')->result();
 		$this->loadpagecarry('wishlist',$data);
 	}
-
-
 	function search(){
 		$query = $this->input->post('search-bar');
 		$data['buku'] = $this->m_data->search_by_id($query,'nama','buku');
@@ -66,17 +65,13 @@ class Welcome extends CI_Controller {
 		$this->load->view('search',$data);
 		$this->load->view('footer');
 	}
-
 	function promo(){
 		 $data['promo_item'] = $this->m_data->get('promo');
 		$this->loadpagecarry('promo',$data);
 	}
-
 	function flash(){
 		$this->loadpage('flash_sale');
 	}
-
-
 	function register_user(){
 		$data = array(
 			'email' => $this->input->post('email'),
@@ -86,7 +81,6 @@ class Welcome extends CI_Controller {
 		$this->m_data->register_user('pengguna',$data);
 		redirect(base_url());
 	}
-
 	function login(){
 
 		$where = array(
@@ -111,13 +105,10 @@ class Welcome extends CI_Controller {
 			<?php
 		}
 	}
-
 	function logout(){
 		$this->session->sess_destroy();
 		redirect(base_url());
 	}
-
-
 	function update_pengguna(){
 			$data = array(
 				'email' => $this->input->post('email'),
