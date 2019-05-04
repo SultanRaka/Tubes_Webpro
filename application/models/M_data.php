@@ -82,6 +82,7 @@ class M_data extends CI_Model{
 	// 	$this->db->from($tabname);
 	// 	$this->db->like($filter, $query);
 	// 	return $this->db->get()->row_array();
+
 	// }
 	public function update_pengguna($table,$data_update){
 

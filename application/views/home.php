@@ -86,20 +86,21 @@
             <div class="col-md-10 main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "freeScroll": true }'>
 
           <?php
-            $sale_item = $this->m_data->get_join('flash_sale','buku','buku.id_buku = flash_sale.id_buku');
             foreach($sale_item as $item){?>
-              <div class="carousel-cell">
-                <div class="card">
-                  <a href="<?= site_url() ?>/Welcome/bookpage/<?= $item->id_buku; ?>" style="text-decoration:none;">
-                    <img class="card-img-top" src="<?= $item->link_image; ?>" alt="Card image cap">
-                    <div class="card-body">
-                      <h4 class="card-title"><?= $item->nama; ?></h4>
-                      <h5><?= $item->penerbit; ?></h5>
-                      <h5><?= $item->harga ;?></h5>
+              <a href="#">
+                <div class="carousel-cell">
+                  <div class="card">
+                    <a href="<?= site_url() ?>/Welcome/bookpage/<?= $item->id_buku; ?>" style="text-decoration:none;">
+                      <img class="card-img-top" src="<?= $item->link_image; ?>" alt="Card image cap">
+                      <div class="card-body">
+                        <h4 class="card-title"><?= $item->nama; ?></h4>
+                        <h5><?= $item->penerbit; ?></h5>
+                        <h5><?= $item->harga ;?></h5>
+                      </div>
+                    </a>
                     </div>
-                  </a>
-                  </div>
-              </div>
+                </div>
+              </a>
           <?php } ?>
 
 

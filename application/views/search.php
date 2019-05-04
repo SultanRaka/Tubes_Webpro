@@ -65,13 +65,13 @@
           </div>
           <div style="display:flex;">
             <?php foreach($buku as $item) :  ?>
-              <div class="carousel-cell">
-                <div class="card">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+              <div class="carousel-cell" >
+                <div class="card" style="height:100px;">
+                    <img class="card-img-top" src="<?= $item->link_image ?>" alt="Card image cap">
                     <div class="card-body">
-                      <h4 class="card-title">Card title</h4>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a class="btn btn-primary">Button</a>
+                      <h4 class="card-title"><?= $item->nama ?></h4>
+                      <p class="card-text"><?= $item->penerbit ?></p>
+                      <p class="card-text"><?= $item->harga ?></p>
                     </div>
                 </div>
               </div>

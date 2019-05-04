@@ -1,5 +1,5 @@
 
-<div class="inner-container" style="padding-top:10%;;">
+<div class="inner-container" style="padding-top:10%;">
   <div style="display:flex;">
     <div class="">
       <div class="">
@@ -26,7 +26,8 @@
       </div>
       <div class="" align="center">
         <div class="" style="padding:5% 0 5%;">
-          <button type="button" name="button" style="width:100%; height:40px; border-radius:4px;">Beli Sekarang</button>
+          <button type="button" name="button" style="width:100%; height:40px; border-radius:4px;"
+          onclick=" window.location = ' <?= site_url('Welcome/tambah_keranjang');?>/<?= $id ?>'">Beli Sekarang</button>
         </div>
         <div class="">
           <button type="button" name="button" style="width:100%; height:40px; border-radius:4px;">Tambah Wishlist</button>
