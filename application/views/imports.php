@@ -146,13 +146,15 @@
   		margin-top: 10px;
   	}
   	#loginmenu{
-  	 top: 60px;
-     left: 400px;
-   	 padding: 0px 25px;
   	 font-family: Karla,sans-serif;
   	 box-shadow: 0 0 16px 0 rgba(0,0,0,.12), 0 16px 16px 0 rgba(0,0,0,.24);
   	 border-radius: 0 0 5px 5px;
   	}
+    #login-menu-container{
+      max-width:300px;
+      max-height:300px;
+      transform:translate(900px,60px);
+    }
 
     input[type="text"],input[type="password"],input[type="number"]{
       outline: none;
@@ -165,6 +167,23 @@
       padding-top:20px;
       font-size: 17px;
       padding-bottom: 5px;
+    }
+
+    .no-border-fix{
+      padding-top:0;
+    }
+    .user-form-label{
+      padding: 20px 0 5px;
+    }
+    .user-form-banner{
+      background:#e8eaf6;
+      margin-top: 20px;
+      weight:50px;
+      padding: 15px;
+      height:50px;
+      color:#281e5a;
+      font-family:Karla,sans-serif;
+      font-size:18px;
     }
 
     .paddinghometop{

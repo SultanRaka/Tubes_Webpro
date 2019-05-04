@@ -86,6 +86,7 @@
          </div>
        </div>
 			 <div class="modal fade" id="loginmenu">
+				 <div id="login-menu-container">
 					 <div class="modal-dialog">
 						 <div class="modal-content" style="max-width:300px;">
 							 <div class="card" >
@@ -100,40 +101,42 @@
 						 </div>
 					 </div>
 				 </div>
-		 <div class="dropdown-menu"  id="navbarDropdown" aria-labelledby="navbarDropdown" style="z-index:9999; top:90px; position:sticky; width:100%;">
-				 <div class="inner-container">
-					 <div class="container-fluid" style="display:flex; padding: 1% 0 1%;" >
-					 	<div class="drop-container" style="border-right:1px solid black; padding-right:50px;">
-					 		<div class="drop-item">
-					 			<a href="#" class="drop-text"><b>BUKU</b></a>
-					 		</div>
-							<div class="drop-item">
-								<a href="#" class="drop-text"><b>EBOOK</b></a>
-							</div>
-							<div class="drop-item">
-								<a href="#" class="drop-text"><b>FASHION & AKSESORIS</b></a>
-							</div>
-							<div class="drop-item">
-								<a href="#" class="drop-text"><b>MAJALAH</b></a>
-							</div>
-							<div class="drop-item">
-								<a href="#" class="drop-text"> <b>OLAHRAGA</b> </a>
-							</div>
-							<div class="drop-item">
-								<a href="#" class="drop-text"><b>STATIONARY, SEKOLAH & KANTOR</b></a>
-							</div>
-							<div class="drop-item">
-								<a href="#" class="drop-text"><b>TEKNOLOGI</b></a>
-							</div>
-							<div class="drop-item" style="padding-bottom:150px;">
-								<a href="#" class="drop-text"><b>MAINAN & HOBI</b></a>
-							</div>
-					 	</div>
-						<div class="drop-container">
 
-						</div>
-					 </div>
-				 </div>
 			</div>
+			<div class="dropdown-menu"  id="navbarDropdown" aria-labelledby="navbarDropdown" style="z-index:9999; top:90px; position:sticky; width:100%;">
+	 			 <div class="inner-container">
+	 				 <div class="container-fluid" style="display:flex; padding: 1% 0 1%;" >
+	 					<div class="drop-container" style="border-right:1px solid black; padding-right:50px;">
+	 						<div class="drop-item">
+	 							<a href="#" class="drop-text"><b>BUKU</b></a>
+	 						</div>
+	 						<div class="drop-item">
+	 							<a href="#" class="drop-text"><b>EBOOK</b></a>
+	 						</div>
+	 						<div class="drop-item">
+	 							<a href="#" class="drop-text"><b>FASHION & AKSESORIS</b></a>
+	 						</div>
+	 						<div class="drop-item">
+	 							<a href="#" class="drop-text"><b>MAJALAH</b></a>
+	 						</div>
+	 						<div class="drop-item">
+	 							<a href="#" class="drop-text"> <b>OLAHRAGA</b> </a>
+	 						</div>
+	 						<div class="drop-item">
+	 							<a href="#" class="drop-text"><b>STATIONARY, SEKOLAH & KANTOR</b></a>
+	 						</div>
+	 						<div class="drop-item">
+	 							<a href="#" class="drop-text"><b>TEKNOLOGI</b></a>
+	 						</div>
+	 						<div class="drop-item" style="padding-bottom:150px;">
+	 							<a href="#" class="drop-text"><b>MAINAN & HOBI</b></a>
+	 						</div>
+	 					</div>
+	 					<div class="drop-container">
 
+	 					</div>
+	 				 </div>
+	 			 </div>
+
+	 			 </div>
 <body>

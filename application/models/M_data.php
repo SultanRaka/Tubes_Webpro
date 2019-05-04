@@ -16,7 +16,7 @@ class M_data extends CI_Model{
 		->join($join, $where)
 		->get();
 	}
-	function get_join_cart($from,$join,$where,$email){
+	function get_join_where($from,$join,$where,$email){
 		return $this->db->select('*')
 		->from($from)
 		->join($join, $where)

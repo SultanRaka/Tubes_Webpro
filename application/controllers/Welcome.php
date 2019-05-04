@@ -36,18 +36,21 @@ class Welcome extends CI_Controller {
 	function bookpage($id){
 		$where = array('id_buku'=> $id);
 		$data['book'] = $this->m_data->get_by('buku',$where)->row_array();
+    $data['id'] = $id;
 		$this->loadpagecarry('bookpage',$data);
 	}
 	function keranjang(){
 			$where ='buku.id_buku = keranjang.id_buku';
       $email = $this->session->userdata('email');
-			$data['cart_item'] = $this->m_data->get_join_cart('keranjang','buku',$where,$email)->result();
+			$data['cart_item'] = $this->m_data->get_join_where('keranjang','buku',$where,$email)->result();
       $data['count_result'] = count($data['cart_item']);
 			$this->loadpagecarry('page_keranjang',$data);
 	}
 	function akun(){
-		$where = array('email'=>$this->session->email);
-		$data['user'] = $this->m_data->get_by('pengguna',$where)->row_array();
+    $where ='wishlist.id_buku = buku.id_buku';
+		$email = $this->session->email;
+		$data['user'] = $this->m_data->get_by('pengguna',array('email'=>$this->session->email))->row_array();
+    $data['wishlist'] = $this->m_data->get_join_where('wishlist','buku',$where,$email)->result();
 		$this->loadpagecarry('akun',$data);
 	}
 	function checkout(){
@@ -66,11 +69,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer');
 	}
 	function promo(){
-		 $data['promo_item'] = $this->m_data->get('promo');
+		$data['promo_item'] = $this->m_data->get('promo');
 		$this->loadpagecarry('promo',$data);
 	}
 	function flash(){
-		$this->loadpage('flash_sale');
+    $data['sale_item'] = $this->m_data->get_join('flash_sale','buku','buku.id_buku = flash_sale.id_buku')->result();
+		$this->loadpagecarry('flash_sale',$data);
 	}
 	function register_user(){
 		$data = array(
@@ -125,5 +129,27 @@ class Welcome extends CI_Controller {
 			$this->db->update('pengguna',$data);
 				redirect(base_url());
 	}
+  function tambah_wishlist(){
+
+  }
+  function tambah_keranjang($id){
+    $data = array(
+      'email' => $this->session->email,
+      'id_buku' => $id
+    );
+    $query = $this->m_data->insert('keranjang',$data);
+    redirect(site_url('Welcome/keranjang'));
+    if ($query){
+      echo "Insertion Complete!";
+    }else{
+      echo "Fail";
+    }
+  }
+  function wipe_wishlist(){
+
+  }
+  function wipe_keranjang(){
+
+  }
 }
 ?>
