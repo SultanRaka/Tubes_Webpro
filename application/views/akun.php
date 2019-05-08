@@ -69,7 +69,7 @@
                     <input type="text" name="telp" placeholder="" value="<?php echo $user['telp']; ?>" style="font:Karla,sans-serif;font-size:14px;width:400px; height:20px; ">
                   </div>
                   <div class="user-form-label"><a style="">Profesi atau Pekerjaan</a></div>
-                  <select name="job" class="form-control" id="sel1" value="<?php echo $options['job'] ?>">
+                  <select name="job" class="form-control" style="height:35px;" id="sel1" value="<?php echo $options['job'] ?>">
                       <option value="<?php echo $user['job'];?>" selected="selected"><?php echo $user['job'];?></option>
                       <option value="Pegawai Swasta">Pegawai Swasta</option>
                       <option value="Pegawai Negeri">Pegawai Negeri</option>
@@ -78,7 +78,7 @@
                       <option value="Pengusaha">Pengusaha</option>
                   </select>
                   <div class="user-form-label"><a style="">Hobi</a></div>
-                  <select name="hobi" class="form-control" id="sel1" value="<?php echo $options['hobi']; ?>">
+                  <select name="hobi" class="form-control" style="height:35px;" id="sel1" value="<?php echo $options['hobi']; ?>">
                       <option value="<?php echo $user['hobi'];?>" selected="selected"><?php echo $user['hobi'];?></option>
                       <option value="Kecantikan">Kecantikan</option>
                       <option value="Otomotif">Memancing</option>
@@ -87,7 +87,7 @@
                       <option value="Olahraga">melukis</option>
                   </select>
                   <div class="user-form-label"><a style="">Kategori Buku Favorite</a></div>
-                  <select name="favbook" class="form-control" id="sel2" value="<?php echo $options['favbook']; ?>">
+                  <select name="favbook" class="form-control" style="height:35px;" id="sel2" value="<?php echo $options['favbook']; ?>">
                       <option value="<?php echo $user['favbook'];?>" selected="selected"><?php echo $user['favbook']?></option>
                       <option value="Pegawai Swasta">Buku Anak</option>
                       <option value="Pegawai Negeri">Agama</option>

@@ -1,9 +1,7 @@
 <div class="inner-container" style="padding-top:10%;">
   <div class="container-fluid" style="display:flex;">
     <div style="margin:auto; display:flex;">
-      <?php
-
-        foreach($promo_item->result() as $item){?>
+      <?php foreach($promo_item->result() as $item){?>
           <div class="" style="padding:0 10px 0;">
             <div class="card" style="width:318px; ">
               <img class="" src="<?= $item->link_image; ?>"  style=" width:318px; height:130px; object-fit:cover;">

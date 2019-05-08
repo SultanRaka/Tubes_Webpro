@@ -7,8 +7,10 @@
       </div>
       <div style="display:flex; padding:10px 0px 10px;">
         <p>Bagikan : </p>
-        <a href="#" style="padding:0px 10px 0px;;"><img src="https://www.gramedia.com/assets/social-icon/facebook-9.svg" alt=""></a>
-        <a href="#"><img src="https://www.gramedia.com/assets/social-icon/twitter-5.svg" alt=""></a>
+        <a href="#" style="padding:0px 10px 0px;;">
+          <img src="https://www.gramedia.com/assets/social-icon/facebook-9.svg">
+        </a>
+        <a href="#"><img src="https://www.gramedia.com/assets/social-icon/twitter-5.svg" ></a>
       </div>
     </div>
     <div class="" style="padding-right:200px; padding-left:50px;">
@@ -66,10 +68,8 @@
               <p><?= $book['lebar']; ?></p>
               <p><?= $book['panjang']; ?></p>
             </div>
-
           </div>
   			</div>
   		</div>
   	</div>
-
 </div>

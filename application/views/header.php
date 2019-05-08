@@ -9,10 +9,10 @@
 				<a href="#">Bantuan</a>
 			</div>
 		</div>
-		 <div style="height:67px;" class="col-md-12 navcontainer">
-				<div class="container">
+		<div style="height:67px;" class="col-md-12 navcontainer">
+			<div class="container">
 				<div class="row" >
-					<div class="container-fluid"  >
+					<div class="container-fluid">
 						<nav class="navbar navbar-expand-xl navbar-dark bg-black" >
 							<a class="navbar-brand" href="<?php echo base_url();?>"> <img src="<?php echo base_url();?>img/logo/gramed.svg" w alt="Gramediul.com"> </a>
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

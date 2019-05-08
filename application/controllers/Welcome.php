@@ -2,12 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
-
   function __construct(){
 		parent::__construct();
 		$this->load->model('M_data');
 	}
-
 	function loadpage($name,$data,$label){
 		$this->load->view('imports');
 		$this->load->view('header',$label);
@@ -68,7 +66,7 @@ class Welcome extends CI_Controller {
 		$query = $this->input->post('search-bar');
 		$data['buku'] = $this->m_data
       ->search_by_id($query,'nama','buku');
-    $this->loadpage('promo',$data,$label);
+    $this->loadpage('search',$data,$label);
 	}
 	function promo(){
     $label['title'] = 'Promo' ;
