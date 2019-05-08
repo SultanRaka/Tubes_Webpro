@@ -5,7 +5,7 @@ class M_data extends CI_Model{
 			return $this->db->get($table);
 	}
 	function get_by($table,$item){
-			return $this->db->get_where($table,$item);
+			return $this->db->get_where($table,$item); 
 	}
 	function insert($table,$item){
 		$this->db->insert($table,$item);
