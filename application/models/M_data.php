@@ -1,31 +1,100 @@
 <?php
 
 class M_data extends CI_Model{
-	function get($table){
-			return $this->db->get($table);
+	function get_data($table){
+			return $this->db->get($table)->result();
 	}
-	function get_by($table,$item){
-			return $this->db->get_where($table,$item);
-	}
-	function insert($table,$item){
-		$this->db->insert($table,$item);
-	}
-	function get_join($from,$join,$where){
-		return $this->db->select('*')
-		->from($from)
-		->join($join, $where)
-		->get();
+	function get_buku(){
+		return $this->db->get('buku');
 	}
 
+	function get_wishlist(){
+		return $this->db->get('wishlist');
+	}
+
+	function register_user($data,$table){
+		$this->db->insert($table,$data);
+	}
+
+	function cek_log($table,$where){
+		return $this->db->get_where($table,$where);
+	}
+
+	function get_pengguna(){
+		return $this->db->get('pengguna');
+	}
+<<<<<<< HEAD
+=======
+
+	function detil_pengguna($email){
+		return $this->db->query("SELECT * FROM pengguna where email = '$email'");
+	}
+
+	function get_order(){
+		return $this->db->get('orderan');
+	}
+
+	function hapus_data($where,$table){
+		$this->db->where($where);
+		$this->db->delete($table);
+	}
+>>>>>>> 94d19f4544cd55f80a56a51c647db7613b57bf4c
+
+	function input_data($data,$table){
+		$this->db->insert($table,$data);
+	}
+
+	function wipe_order(){
+		return $this->db->empty_table('orderan');
+	}
+
+	function get_join($from,$join,$where){
+		$this->db->select('*');
+		$this->db->from($from);
+		$this->db->join($join, $where);
+		return $this->db->get()->result();
+	}
+
+	function get_by_id($id,$col,$tabname){
+		$this->db->where($col,$id);
+		$data = $this->db->get($tabname);
+		return $data->row_array();
+	}
 	function search_by_id($query,$filter,$tabname){
-		return $this->db->select('*')
-		->from($tabname)
-		->like($filter, $query)
-		->get()->result();
+		$this->db->select('*');
+		$this->db->from($tabname);
+		$this->db->like($filter, $query);
+		return $this->db->get()->row_array();
 	}
+
+	//
+	// function get_join($from,$join,$where){
+	// 	$this->db->select('*');
+	// 	$this->db->from($from);
+	// 	$this->db->join($join, $where);
+	// 	return $this->db->get()->result();
+	// }
+
+	// function get_by_id($id,$col,$tabname){
+	// 	$this->db->where($col,$id);
+	// 	$data = $this->db->get($tabname);
+	// 	return $data->row_array();
+	// }
+	// function search_by_id($query,$filter,$tabname){
+	// 	$this->db->select('*');
+	// 	$this->db->from($tabname);
+	// 	$this->db->like($filter, $query);
+	// 	return $this->db->get()->row_array();
+
+	// }
 	public function update_pengguna($table,$data_update){
+
 		$this->db->where('email', $this->session->userdata('email'));
- 	 	$update = $this->db->update($table,$data_update);
+
+ 	 $update = $this->db->update($table,$data_update);
+
+
 	}
+
 
 }
