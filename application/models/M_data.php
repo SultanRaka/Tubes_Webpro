@@ -16,22 +16,16 @@ class M_data extends CI_Model{
 		->join($join, $where)
 		->get();
 	}
-	function get_join_where($from,$join,$where,$email){
-		return $this->db->select('*')
-		->from($from)
-		->join($join, $where)
-		->where('email',$email)
-		->get();
-	}
+
 	function search_by_id($query,$filter,$tabname){
 		return $this->db->select('*')
 		->from($tabname)
 		->like($filter, $query)
 		->get()->result();
 	}
-	function update_pengguna($table,$data_update){
+	public function update_pengguna($table,$data_update){
 		$this->db->where('email', $this->session->userdata('email'));
- 	 	$this->db->update($table,$data_update);
+ 	 	$update = $this->db->update($table,$data_update);
 	}
 
 }
