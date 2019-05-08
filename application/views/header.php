@@ -1,3 +1,7 @@
+<head>
+	<title><?= $title ?></title>
+	<link rel="icon" href="https://upload.wikimedia.org/wikipedia/id/1/1a/Gramedia_logo.png" type="image/ico">
+</head>
 
 	<div class="fixed-top">
 		<div class="miniheader-item col-md-12" style="background-color: #1c1540;">
@@ -5,7 +9,7 @@
 				<a href="#">Bantuan</a>
 			</div>
 		</div>
-		    <div style="height:67px;" class="col-md-12 navcontainer">
+		 <div style="height:67px;" class="col-md-12 navcontainer">
 				<div class="container">
 				<div class="row" >
 					<div class="container-fluid"  >
@@ -28,16 +32,12 @@
 								</form>
 							</li>
 							<li class="nav-item">
-								<!-- sudah login -->
 								<?php if($this->session->userdata('email')){?>
 									<div class="col-sm-12" style="padding-top:40%">
 											<a href="#"data-toggle="modal" data-target="#loginmenu"> <img src="<?= base_url('img/icons/user.png')  ?>" style="max-width:25px; max-height:25px; padding-bottom:7px;"> </a>
 											<a style="padding:0 10px 0;"> | </a>
 											<a href="<?= base_url('index.php/Welcome/keranjang');?>"> <img src="<?= base_url('img/icons/cart.png')  ?>" style="max-width:25px; max-height:25px; padding-bottom:7px;"> </a>
 									</div>
-
-								<!--belum login-->
-
 								<?php } else{ ?>
 
 											<div class="col-sm-12" style="padding-top:30%">
@@ -92,9 +92,9 @@
 							 <div class="card" >
 								 <article class="card-body">
 									 <h2>Halo, <b style="color:lightblue;"> <?= $this->session->nama; ?> </b> </h2>
-									 <h3><a href="<?php echo base_url();?>index.php/Welcome/akun"> Pesanan Saya </a></h3>
-									 <h3><a href="<?php echo base_url();?>index.php/Welcome/akun"> Akun Saya</a></h3>
-									 <h3><a href="<?php echo base_url();?>index.php/Welcome/akun"> Wishlist Saya</a></h3>
+									 <h3><a href="<?php echo base_url();?>index.php/Welcome/akun/pesanan"> Pesanan Saya </a></h3>
+									 <h3><a href="<?php echo base_url();?>index.php/Welcome/akun/akun_saya"> Akun Saya</a></h3>
+									 <h3><a href="<?php echo base_url();?>index.php/Welcome/akun/wishlist"> Wishlist Saya</a></h3>
 									 <h3><a  href="<?php echo base_url();?>index.php/Welcome/logout"> Keluar</a></h3>
 								 </article>
 							 </div>

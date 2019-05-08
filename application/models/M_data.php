@@ -23,17 +23,15 @@ class M_data extends CI_Model{
 		->where('email',$email)
 		->get();
 	}
-
-
 	function search_by_id($query,$filter,$tabname){
 		return $this->db->select('*')
 		->from($tabname)
 		->like($filter, $query)
 		->get()->result();
 	}
-	public function update_pengguna($table,$data_update){
+	function update_pengguna($table,$data_update){
 		$this->db->where('email', $this->session->userdata('email'));
- 	 	$update = $this->db->update($table,$data_update);
+ 	 	$this->db->update($table,$data_update);
 	}
 
 }
